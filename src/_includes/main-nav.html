@@ -1,18 +1,16 @@
-{% set values = 'navigation.values' | i18n %} {% set focus = 'navigation.focus'
-| i18n %} {% set tools = 'navigation.tools' | i18n %} {% set careers =
-'navigation.careers' | i18n %}
+{% set about = 'navigation.about' | i18n %} {% set mission =
+'navigation.mission' | i18n %} {% set contact = 'navigation.contact' | i18n %}
+{% set join = 'navigation.join' | i18n %}
 
 <li>
-  <a href="#{{values}}">{{ values }}</a>
+  <a href="#about">{{ about }}</a>
 </li>
 <li>
-  <a href="#{{focus}}">{{ focus }}</a>
+  <a href="#mission">{{ mission }}</a>
 </li>
 <li>
-  <a href="#{{tools}}">{{ tools }}</a>
+  <a href="#contact">{{ contact }}</a>
 </li>
 <li>
-  <a href="#{{ 'navigation.careers' | i18n }}"
-    >{{ 'navigation.careers' | i18n }}</a
-  >
+  <a href="#join" className="button" data-highlight="true">{{ join }}</a>
 </li>
