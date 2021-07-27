@@ -1,5 +1,5 @@
 .button {
-  @include apply-utility('font', 'bold');
+  @include apply-utility('font', 'serif');
 
   background-color: get-color('black');
   color: get-color('white');

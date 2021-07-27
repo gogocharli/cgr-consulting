@@ -1,22 +1,21 @@
-@import 'fonts';
+@import './fonts';
 
 // Import configuration from gorko
-@import 'config';
+@import './config';
 
 // Get the design tokens
 @import 'gorko';
 
-@import 'reset';
+@import './reset';
 
 body {
-  background-color: get-color('white');
-  color: get-color('black');
+  color: get-color('primary');
   display: grid;
   font-size: get-size('400');
   line-height: 1.4;
   scroll-behavior: smooth;
 
-  @include apply-utility('font', 'regular');
+  @include apply-utility('font', 'serif');
 }
 
 ::selection {
@@ -59,10 +58,9 @@ h2,
 h3,
 h4,
 h5 {
-  color: get-color('black');
-  font-weight: 400; // Overwrite browser defaults
+  font-weight: normal;
 
-  @include apply-utility('font', 'bold');
+  @include apply-utility('font', 'serif-light');
   @include apply-utility('leading', 'flat');
 }
 
@@ -78,28 +76,22 @@ article {
   scroll-margin-top: 2ex;
 }
 
-@import 'blocks/animations';
-@import 'blocks/button';
-@import 'blocks/skip-link';
-@import 'blocks/site-head';
-@import 'blocks/site-foot';
-@import 'blocks/nav';
-@import 'blocks/hero';
-@import 'blocks/values';
-@import 'blocks/focus';
-@import 'blocks/tools';
-@import 'blocks/clients';
-@import 'blocks/slides';
-@import 'blocks/form';
-@import 'blocks/careers';
+@import './blocks/animations';
+@import './blocks/button';
+@import './blocks/skip-link';
+@import './blocks/site-head';
+@import './blocks/site-foot';
+@import './blocks/nav';
+@import './blocks/hero';
+@import './blocks/form';
 
 // Import utilities
-@import 'utilities/flow';
-@import 'utilities/radius';
-@import 'utilities/site-wrap';
-@import 'utilities/visually-hidden';
-@import 'utilities/wrapper';
-@import 'utilities/auto-grid';
-@import 'utilities/explicit-grid';
-@import 'utilities/no-list';
-@import 'utilities/no-decoration';
+@import './utilities/flow';
+@import './utilities/radius';
+@import './utilities/site-wrap';
+@import './utilities/visually-hidden';
+@import './utilities/wrapper';
+@import './utilities/auto-grid';
+@import './utilities/explicit-grid';
+@import './utilities/no-list';
+@import './utilities/no-decoration';
