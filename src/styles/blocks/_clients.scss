@@ -1,0 +1,32 @@
+.clients {
+  &__title {
+    margin-bottom: 1rem;
+    text-align: center;
+
+    @include media-query('md') {
+      text-align: left;
+    }
+  }
+
+  @include media-query('lg') {
+    &[data-arrow='right'] {
+      cursor: url(/static/hover-arrow-right.png), -moz-grab;
+      cursor: url(/static/hover-arrow-right.png), grab;
+    }
+
+    &[data-arrow='left'] {
+      cursor: url(/static/hover-arrow-left.png), -moz-grab;
+      cursor: url(/static/hover-arrow-left.png), grab;
+    }
+
+    &__title {
+      grid-column: 1 / span 3;
+      grid-row: 1;
+    }
+
+    .slides {
+      grid-column: 3 / span 5;
+      grid-row: 2;
+    }
+  }
+}

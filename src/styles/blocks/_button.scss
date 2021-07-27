@@ -1,0 +1,35 @@
+.button {
+  @include apply-utility('font', 'bold');
+
+  background-color: get-color('black');
+  color: get-color('white');
+  cursor: pointer;
+  display: inline-block;
+  font-size: get-size('300');
+  letter-spacing: 0.08em;
+  padding: 0.8rem 1.6rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  /* Makes light text on dark background better*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:hover {
+    // Make sure hover state always applies
+    background-color: get-color('primary') !important;
+    color: get-color('white') !important;
+    border-color: get-color('primary') !important;
+  }
+
+  // Variant for secondary buttons (eg. forms)
+  &[data-variant='secondary'] {
+    background-color: get-color('white');
+    border: 1px solid get-color('black');
+    color: get-color('black');
+
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+  }
+}

@@ -1,0 +1,127 @@
+<article class="form__container wrapper">
+  {% if formTitle == true %}
+  <h3 id="signup" class="[ form__title ] [ text-600 md:text-700 ]">
+    <span class="[ form__subtitle ] [ text-300 md:text-500 font-regular ]"
+      >{{ 'form.subtitle' | i18n }}</span
+    >
+    {{ 'form.title' | i18n }}
+  </h3>
+  {% endif %}
+  <div class="outline-container">
+    <div class="form signup">
+      {% if formImage == true %}
+      <div class="form__helper">
+        <div class="error">
+          {%- include "warning.svg" -%}
+          <template id="error-message">
+            <p class="[ message ] [ weight-bold text-500 ]"></p>
+            <p class="[ example ] [ text-200 ]"></p>
+          </template>
+        </div>
+        <picture>
+          <source
+            srcset="/static/illustrations/analytics.svg"
+            media="(min-width: 50em)"
+          />
+          <img src="" alt="" />
+        </picture>
+      </div>
+      {% endif %}
+      <form
+        action="/{{ locale }}/signup-success"
+        name="signup"
+        method="POST"
+        data-netlify="true"
+        class="flow"
+        data-size='{{ "full" if formImage == false }}'
+      >
+        <div class="field" data-field="0">
+          <label for="fullName" class="text-300">
+            <span class="field-label">{{ 'form.name' | i18n }}</span>
+          </label>
+          <input
+            type="text"
+            name="fullName"
+            id="fullName"
+            autocomplete="name"
+            placeholder="John Doe"
+            required
+          />
+          <span class="label-icon"> {% include 'icons/error-icon.svg' %} </span>
+        </div>
+
+        {% if formResume == false %}
+        <div class="field" data-field="0">
+          <label for="company" class="text-300">
+            <span class="field-label">{{ 'form.company' | i18n }}</span>
+          </label>
+          <input
+            type="text"
+            name="company"
+            id="company"
+            placeholder="Acme Inc"
+            required
+          />
+          <span class="label-icon"> {% include 'icons/error-icon.svg' %} </span>
+        </div>
+        {% endif %}
+
+        <div class="field" data-field="1">
+          <label for="email" class="text-300">
+            <span class="field-label">{{ 'form.email' | i18n }}</span>
+          </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            autocomplete="email"
+            placeholder="solutions@omniumconcept.com"
+            required
+          />
+          <span class="label-icon"> {% include 'icons/error-icon.svg' %} </span>
+        </div>
+
+        <div class="field" data-field="2">
+          <label for="phone" class="text-300">
+            <span class="field-label">{{ 'form.phone' | i18n }}</span>
+          </label>
+          <input
+            type="text"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            name="phone"
+            id="phone"
+            autocomplete="tel"
+            placeholder="8881234567"
+            required
+          />
+          <span class="label-icon"> {% include 'icons/error-icon.svg' %} </span>
+        </div>
+
+        {% if formResume == true %}
+        <div class="field file">
+          <label for="file" class="button" data-variant="secondary">
+            <span class="field-label">{{ 'form.upload' | i18n }}</span>
+          </label>
+          <input
+            class="visually-hidden"
+            type="file"
+            name="file"
+            id="file"
+            accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.pdf"
+          />
+        </div>
+        {% endif %}
+
+        <input
+          type="submit"
+          class="button"
+          value="{{ 'form.submit' | i18n }}"
+        />
+      </form>
+    </div>
+    {% if formImage == true %}
+    <div class="form__outline"></div>
+    {% endif %}
+  </div>
+</article>

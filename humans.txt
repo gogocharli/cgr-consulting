@@ -1,0 +1,31 @@
+                            
+/* TEAM */
+
+                            
+Brand Design, Web Design & Development: Charles De Mount Yahouedeou
+Twitter: @demountl.
+Site: gogocharli.com
+Location: Montreal, Canada.
+
+Illustrations: Piqo Design
+Twitter: @piqodesign
+Site: https://znap.link/piqodesign
+
+
+Fonts: Pangram Pangram & Ryoichi Tsunekawa
+
+                            
+
+/* SITE */
+
+                            
+Last update: 2021/07/31
+
+                            
+Standards: HTML5, CSS3, SVG2
+
+                            
+Deploy: Netlify.
+
+                            
+Software: Eleventy, Snowpack, Sass

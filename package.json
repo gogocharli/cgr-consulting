@@ -7,12 +7,24 @@
     "lint": "prettier --check \"src/**/*.js\""
   },
   "dependencies": {
+    "autoprefixer": "^10.3.1",
     "canvas-confetti": "^1.2.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
+    "@snowpack/plugin-postcss": "^1.4.3",
     "@snowpack/plugin-run-script": "^2.3.0",
+    "@snowpack/plugin-sass": "^1.4.0",
+    "cssnano": "^5.0.7",
+    "eleventy-plugin-i18n": "^0.1.2",
+    "eleventy-plugin-seo": "^0.5.2",
+    "gorko": "^0.7.1",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",
     "snowpack": "^3.3.7"
-  }
+  },
+  "private": true
 }

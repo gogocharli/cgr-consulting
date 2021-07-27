@@ -1,0 +1,11 @@
+.skip-link {
+  position: absolute;
+  top: get-size('400');
+  left: get-size('400');
+  z-index: 99; // Always keep on top
+
+  // Hide when not in focus
+  &:not(:focus) {
+    @extend .visually-hidden;
+  }
+}

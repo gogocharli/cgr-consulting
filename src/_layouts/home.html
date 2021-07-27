@@ -1,0 +1,10 @@
+{% extends './base.html' %} {% block content %}
+<section class="hero wrapper lg-grid">
+  <div class="hero__content flow">
+    <h1 class="[ hero__heading ] [ text-700 md:text-800 measure-micro ]">
+      {{ hero.title }}
+    </h1>
+    <p>{{ hero.subtitle }}</p>
+    <p class="[ hero__text ] [ md:text-500 measure-short ]">{{ hero.text }}</p>
+  </div>
+</section>

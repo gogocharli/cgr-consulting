@@ -1,0 +1,39 @@
+.site-head {
+  padding: get-size('400') 0 0;
+
+  // Using a slightly modified devils albatros technique by Nils Binder
+  // @see https://9elements.com/blog/the-devils-albatros-an-algorithmic-layout-technique
+  &__inner {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    > * {
+      flex-grow: 1;
+    }
+
+    > *:first-child {
+      order: -1;
+    }
+  }
+
+  &__inner:before {
+    content: '';
+    flex-grow: 666;
+    flex-basis: calc((38rem - 100%) * 666);
+  }
+
+  &__brand {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include media-query('s') {
+    padding-top: get-size('500');
+    &__inner {
+      padding: get-size('300') 0;
+      flex-direction: row;
+      box-shadow: 0 1px 0 get-color('black');
+    }
+  }
+}

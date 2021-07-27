@@ -1,0 +1,12 @@
+{
+  "title": "CGR Consulting",
+  "description": "Grow your organization through effective direct marketing.",
+  "url": "https://cgr-consulting.ca",
+  "author": "Chris Gregory Roussis",
+  "image": "https://solutions.omniumconcept.com/static/social-image.jpg",
+  "options": {
+    "titleStyle": "minimalistic",
+    "titleDivider": "|",
+    "imageWithBaseUrl": false
+  }
+}
