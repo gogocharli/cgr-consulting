@@ -1,3 +1,52 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * bebas-neue-pro:
+ *   - http://typekit.com/eulas/00000000000000007735c8b3
+ *   - http://typekit.com/eulas/00000000000000007735c8b9
+ *
+ * © 2009-2021 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2021-07-27 18:54:17 UTC"}*/
+
+@import url('https://p.typekit.net/p.css?s=1&k=yel5fvs&ht=tk&f=44426.44428&a=13418997&app=typekit&e=css');
+
+@font-face {
+  font-display: fallback;
+  font-family: 'bebas-neue-pro';
+  src: url('https://use.typekit.net/af/1c26fd/00000000000000007735c8b3/30/l?primer=ec1cdd61c86ea54544edc1c5ee26b1a9a2365cc235e1ad12ad17b2e35345290a&fvd=i4&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/1c26fd/00000000000000007735c8b3/30/d?primer=ec1cdd61c86ea54544edc1c5ee26b1a9a2365cc235e1ad12ad17b2e35345290a&fvd=i4&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/1c26fd/00000000000000007735c8b3/30/a?primer=ec1cdd61c86ea54544edc1c5ee26b1a9a2365cc235e1ad12ad17b2e35345290a&fvd=i4&v=3')
+      format('opentype');
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: 'bebas-neue-pro';
+  src: url('https://use.typekit.net/af/6fab65/00000000000000007735c8b9/30/l?primer=ec1cdd61c86ea54544edc1c5ee26b1a9a2365cc235e1ad12ad17b2e35345290a&fvd=n6&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/6fab65/00000000000000007735c8b9/30/d?primer=ec1cdd61c86ea54544edc1c5ee26b1a9a2365cc235e1ad12ad17b2e35345290a&fvd=n6&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/6fab65/00000000000000007735c8b9/30/a?primer=ec1cdd61c86ea54544edc1c5ee26b1a9a2365cc235e1ad12ad17b2e35345290a&fvd=n6&v=3')
+      format('opentype');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.tk-bebas-neue-pro {
+  font-family: 'bebas-neue-pro', sans-serif;
+}
+
+/** Self hosted **/
 @font-face {
   font-family: 'Cirka Light';
   src: url('/static/fonts/Cirka/Cirka-Light.woff2') format('woff2'),
