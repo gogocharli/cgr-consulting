@@ -43,19 +43,52 @@ $gorko-colors: (
   'error': #cc1b1b,
 );
 
+$default-colors: (
+  'text': map-get($gorko-colors, 'primary'),
+  'bg': map-get($gorko-colors, 'white'),
+);
+
+$inverted-colors: (
+  'text': map-get($gorko-colors, 'white'),
+  'bg': map-get($gorko-colors, 'primary'),
+);
+
 /**
   * CORE CONFIG
   * This powers everything from utility class generation to breakpoints
   * to enabling/disabling pre-built components/utilities.
   */
 $gorko-config: (
+  'css-vars': (
+    'color': $gorko-colors,
+    'themes': (
+      'default': (
+        'tokens': (
+          'color': $default-colors,
+        ),
+      ),
+      'inverted': (
+        'tokens': (
+          'color': $inverted-colors,
+        ),
+      ),
+      'inverted-toggle': (
+        'prefix': '[data-theme="inverted"]',
+        'tokens': (
+          'color': $inverted-colors,
+        ),
+      ),
+    ),
+  ),
   'bg': (
-    'items': $gorko-colors,
+    'items': 'color',
+    'css-vars': true,
     'output': 'standard',
     'property': 'background',
   ),
   'color': (
-    'items': $gorko-colors,
+    'items': 'color',
+    'css-var': true,
     'output': 'standard',
     'property': 'color',
   ),
