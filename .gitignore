@@ -2,7 +2,7 @@
 build
 node_modules
 public
-src/_site
+src/__site__
 .DS_Store
 
 # Local Netlify folder
