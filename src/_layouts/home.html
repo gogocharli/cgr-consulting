@@ -59,7 +59,7 @@ endmacro %} {% extends './base.html' %} {% block content %}
 </article>
 
 <article id="mission" class="mission wrapper flow">
-  <div>
+  <div class="mission__text">
     <h2 class="
       [ mission__header ] [ text-550 md:text-700 lg:text-800 ]
       [ leading-tight md:leading-flat ][ tracking-fit md:tracking-tight lg:tracking-flat ]">
@@ -69,7 +69,7 @@ endmacro %} {% extends './base.html' %} {% block content %}
   </div>
   <ul class="objectives">
     {% for goal in mission.objectives %}
-    <li class="goal align-center">
+    <li class="[ goal ] [ align-center flow ]">
       <img src="/static/{{ goal.image }}" alt="" />
       <h3 class="[ font-sans text-uppercase ] [ text-300 md:text-400 leading-tight tracking-loose ]">
         {{ goal.title }}

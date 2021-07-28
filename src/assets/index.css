@@ -1279,6 +1279,24 @@ article {
   flex: 0 0 calc(33vw - 2rem);
 }
 
+.mission__text p {
+  margin-top: 1.25rem;
+}
+.mission .objectives {
+  margin-top: 2.5rem;
+}
+.mission .objectives > * + * {
+  margin-top: 2.5rem;
+}
+.mission .objectives li {
+  --flow-space: 0.625rem;
+}
+.mission .objectives li img {
+  height: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /**
  * FLOW
  * Applies a margin to sibling elements based on a --flow-space custom property.
