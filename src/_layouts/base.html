@@ -6,14 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     {% seo "" %}
     <link rel="shortcut icon" href="/static/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/styles/base.css" />
-    <link
-      rel="preload"
-      href="/scripts/index.js"
-      as="script"
-      crossorign="anonymous"
-    />
-    <script src="/scripts/index.js" type="module" defer></script>
+    {% bundledCSS %} {% bundledJS %}
   </head>
   <body>
     <div class="site-wrap">
