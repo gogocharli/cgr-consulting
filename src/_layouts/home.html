@@ -1,12 +1,11 @@
-{% macro path(pathName, value='', type='text') %}
-  "{{pathName}}/{{value}}"
-{% endmacro %}
-
-{% extends './base.html' %} {% block content %}
+{% macro path(pathName, value='', type='text') %} "{{pathName}}/{{value}}" {%
+endmacro %} {% extends './base.html' %} {% block content %}
 <section class="hero">
   <div class="hero__content flow">
     <div class="wrapper">
-      <h1 class="[ hero__heading ] [ text-500 md:text-600 lg:text-600 ] [ leading-tight ]">
+      <h1
+        class="[ hero__heading ] [ text-500 md:text-600 lg:text-600 ] [ leading-tight ]"
+      >
         {{ hero.title }}
       </h1>
     </div>
@@ -19,52 +18,67 @@
       width="1440"
     />
     <div class="wrapper flow">
-      <h2 class="[ hero__subtitle ] [ text-400 text-uppercase font-smooth weight-bold ] [ font-sans leading-tight tracking-loose ]">{{ hero.subtitle }}</h2>
+      <h2
+        class="
+          [ hero__subtitle ] [ text-400 text-uppercase font-smooth ] [ font-sans leading-tight tracking-loose ]
+        "
+      >
+        {{ hero.subtitle }}
+      </h2>
       {% for text in hero.description %}
-        <p class="[ hero__description ] [ text-400 leading-loose ]">{{ text }}</p>
+      <p class="[ hero__description ] [ text-400 leading-loose ]">{{ text }}</p>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<article id="about" class="about">
-  <h2><span>{{about.prefix}}<span>{{about.title}}<h2>
+<article id="about" class="[ about ] [ wrapper flow bg-primary ] [ text-inverted  align-center md:align-left ]">
+  <h2
+    class="[ about__header ] [ font-sans text-700 md:text-800 ] [ leading-flat ]"
+  >
+    <span
+      class="[ header__prefix ] [ text-400 md:text-500 ] [ leading-tight font-italic ]"
+      >{{about.prefix}}</span
+    >
+    {{about.title}}
+  </h2>
   <div>
-    <p>{{about.text}}</p>
+    <p class="[ text-300 md:text-400 ]">{{about.text}}</p>
   </div>
   <section class="logo-garden">
-    {% for company in about.logos %}
-        {%- include "logos/logo-" + company + ".svg" -%}
-    {% endfor %}
+    <div class="logo">
+      {% for company in about.logos %} {%- include "logos/logo-" + company +
+      ".svg" -%} {% endfor %}
+    </div>
   </section>
 </article>
 
-<article id="mission" class="mission">
+<article id="mission" class="mission wrapper">
   <h2>{{ mission.title }}</h2>
   <p>{{ mission.description }}</p>
   <ul class="objectives">
     {% for goal in mission.objectives %}
-      <li class="goal">
-        <img src="/static/{{ goal.image }}" alt="">
-        <h3>{{ goal.title }}</h3>
-        <p>{{ goal.description }}</p>
-      </li>
+    <li class="goal">
+      <img src="/static/{{ goal.image }}" alt="" />
+      <h3>{{ goal.title }}</h3>
+      <p>{{ goal.description }}</p>
+    </li>
     {% endfor %}
   </ul>
 </article>
 
-<article class="join" id="join">
+<article id="join" class="join wrapper">
   <h2>{{ careers.title }}</h2>
   <p>{{ careers.description }}</p>
   <h3>{{ careers.work }}</h3>
   <ul class="perks">
-  {% for perk in careers.perks %}
+    {% for perk in careers.perks %}
     <li class="perk">
-      <img src="/static/{{ perk.image }}" alt="">
+      <img src="/static/{{ perk.image }}" alt="" />
       <h4>{{ perk.title }}</h4>
       <p>{{ perk.description }}</p>
     </li>
-  {% endfor %}
+    {% endfor %}
   </ul>
   <button type="button" class="button">{{ 'cta' | i18n }}</button>
 </article>

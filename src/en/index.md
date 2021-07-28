@@ -6,10 +6,10 @@ hero:
   title: CGR is a growing sales firm specialised in providing direct marketing solutions for the most ambitious companies in North America.
   subtitle: Taking Your Product To New Heights.
   description:
-    - 'Accédez à de nouveaux marchés, augmentez la satisfaction de votre clientèle, et augmentez vos revenus en délegant vos ventes à des experts.'
-    - 'We’ve been involved with many businesses, from startups to Fortune 500, to understand the limits of marketing at scale. That’s why we specialize in providing direct marketing solutions with our internal sales team.'
+    - 'Whether you are entering a new market or adding a product to your offerings, growing and reaching a new audience is an arduous task even for the best companies.'
+    - 'We’ve been involved with many businesses, from startups to Fortune 500, to understand the limits of marketing at scale. That’s why we specialize in providing direct marketing solutions with our homegrown sales team.'
 about:
-  title: A decade worth of expertise
+  title: A decade worth of expertise.
   prefix: Almost
   text: In 2012, Christopher Gregory Roussis founded CGR Consulting in the beautiful city of Ottawa after years of experience in sales and client outreach. Working on a campaign with one of biggest processing companies in Canada, the team quickly grew to dozens of experts, some of which opened their own offices across the country. After a few years Chris moved back to Quebec in order to access the bigger Montréal market,landing deals with comapnies such as Fiserv and Goodfood.
   logos: ['c360hd', 'fiserv', 'clover', 'goodfood']
