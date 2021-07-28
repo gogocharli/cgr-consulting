@@ -7,7 +7,7 @@ hero:
   subtitle: Taking Your Product To New Heights.
   description:
     - 'Whether you are entering a new market or adding a product to your offerings, growing and reaching a new audience is an arduous task even for the best companies.'
-    - 'We’ve been involved with many businesses, from startups to Fortune 500, to understand the limits of marketing at scale. That’s why we specialize in providing direct marketing solutions with our homegrown sales team.'
+    - 'We’ve been involved with many businesses, from startups to Fortune 500, and understand the limits of marketing at scale. That’s why we specialize in providing direct marketing solutions with our homegrown sales team.'
 about:
   title: A decade worth of expertise.
   prefix: Almost

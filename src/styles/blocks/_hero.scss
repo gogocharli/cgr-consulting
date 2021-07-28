@@ -1,119 +1,21 @@
 .hero {
-  margin-top: 4rem; // offset for the image absolute position
-  position: relative;
+  --flow-space: 2.5rem;
+  margin-top: 3rem;
 
   &__image {
-    position: absolute;
-    right: 0;
-    top: -2rem;
-    z-index: -1;
-
-    @media screen and (max-width: 50em) {
-      animation: alternate 3s both infinite cubic-bezier(0.45, 0.05, 0.55, 0.95)
-        breathe;
-    }
+    object-fit: cover;
+    height: 30vh;
   }
 
-  &__content {
-    --flow-space: 2rem;
-    max-width: 32em;
-  }
-
-  &__form {
-    box-shadow: 0 1px get-color('black');
-    display: flex;
-    max-width: 15em;
-
-    &:focus-within {
-      box-shadow: 0 2px get-color('black');
-    }
-
-    label {
-      flex-grow: 1;
-      position: relative;
-    }
-
-    label > span {
-      display: block;
-      opacity: 1;
-      letter-spacing: 0.05em;
-      overflow: hidden;
-      pointer-events: none;
-      position: relative;
-      text-overflow: ellipsis;
-      text-transform: uppercase;
-      white-space: nowrap;
-
-      transform: translateZ(0);
-      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-
-    input {
-      background: 0 0;
-      border: 0;
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-
-      &:focus {
-        outline: none;
-      }
-
-      &:focus ~ span,
-      &:not(:placeholder-shown) ~ span {
-        transform: translate(0, 1em);
-        opacity: 0;
-      }
-
-      &::placeholder {
-        opacity: 0;
-      }
-    }
-
-    /* Hide the "placeholder" when the input is focused or contains something */
-
-    label,
-    input {
-      padding: 0.5rem 0;
-    }
-
-    button {
-      border: 0;
-      background: 0;
+  &__text {
+    > * {
+      --flow-space: 1.25rem;
     }
   }
 
   @include media-query('md') {
-    margin-top: 2rem;
-
-    &__content {
-      padding-top: 5.6em;
-      padding-bottom: 5.6em;
-    }
-
-    &__image {
-      top: 1rem;
-    }
   }
 
   @include media-query('lg') {
-    place-items: center;
-
-    > * {
-      grid-row: 1;
-    }
-
-    &__content {
-      grid-column: 1 / span 4;
-    }
-
-    &__image {
-      grid-column: 4 / span 5;
-      grid-row: 1;
-      justify-self: stretch;
-      position: relative;
-    }
   }
 }

@@ -1065,12 +1065,12 @@ p {
   }
 }
 
-main {
-  --flow-space: 4em;
+main > * + * {
+  margin-top: 4rem;
 }
 @media (min-width: 50em) {
-  main {
-    --flow-space: 6em;
+  main > * + * {
+    margin-top: 7.5rem;
   }
 }
 
@@ -1238,6 +1238,18 @@ article {
   margin-left: var(--icon-space);
 }
 
+.hero {
+  --flow-space: 2.5rem;
+  margin-top: 3rem;
+}
+.hero__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 30vh;
+}
+.hero__text > * {
+  --flow-space: 1.25rem;
+}
 /**
  * FLOW
  * Applies a margin to sibling elements based on a --flow-space custom property.

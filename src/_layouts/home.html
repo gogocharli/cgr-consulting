@@ -11,13 +11,14 @@ endmacro %} {% extends './base.html' %} {% block content %}
     </div>
     <img
       loading="lazy"
+      class="hero__image"
       src="/static/img-hero.jpg"
       alt=""
       srcset="/static/img-hero.jpg 1x, /static/img-hero-hd.jpg 2x"
       height="576"
       width="1440"
     />
-    <div class="wrapper flow">
+    <div class="hero__text wrapper flow">
       <h2
         class="
           [ hero__subtitle ] [ text-400 text-uppercase font-smooth ] [ font-sans leading-tight tracking-loose ]
