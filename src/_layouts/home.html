@@ -38,19 +38,22 @@ endmacro %} {% extends './base.html' %} {% block content %}
   >
     <span
       class="[ header__prefix ] [ text-400 md:text-500 ] [ leading-tight font-italic ]"
-      >{{about.prefix}}</span
+      >({{about.prefix}})</span
     >
     {{about.title}}
   </h2>
+  <div class="since">
+    {% include 'illustrations/since-star.svg' %}
+  </div>
   <div>
     <p class="[ about__description ] [ text-300 md:text-400 ]">{{about.text}}</p>
   </div>
-  <section class="logo-garden">
+  <div class="logo-garden">
     <div class="logo">
       {% for company in about.logos %} {%- include "logos/logo-" + company +
       ".svg" -%} {% endfor %}
     </div>
-  </section>
+  </div>
 </article>
 
 <article id="mission" class="mission wrapper flow">
@@ -67,25 +70,35 @@ endmacro %} {% extends './base.html' %} {% block content %}
     <li class="goal align-center">
       <img src="/static/{{ goal.image }}" alt="" />
       <h3 class="[ font-sans ] [ text-300 md:text-400 leading-tight tracking-loose ]">{{ goal.title }}</h3>
-      <p>{{ goal.description }}</p>
+      <p class="[ text-300 md:text-400 ]">{{ goal.description }}</p>
     </li>
     {% endfor %}
   </ul>
 </article>
 
-<article id="join" class="join wrapper">
-  <h2>{{ careers.title }}</h2>
-  <p>{{ careers.description }}</p>
-  <h3>{{ careers.work }}</h3>
-  <ul class="perks">
-    {% for perk in careers.perks %}
-    <li class="perk">
-      <img src="/static/{{ perk.image }}" alt="" />
-      <h4>{{ perk.title }}</h4>
-      <p>{{ perk.description }}</p>
-    </li>
-    {% endfor %}
-  </ul>
+<article id="join" class="[ join ] [ wrapper flow align-center ]">
+  <div class="flow">
+    <h2 class="
+      [ join__header ] [ text-550 md:text-700 lg:text-800 ]
+      [ leading-tight md:leading-flat ] [ tracking-fit tracking-flat ]">
+      {{ careers.title }}
+    </h2>
+    <p class="[ join__description ] [ text-300 md:text-400 ]">{{ careers.description }}</p>
+  </div>
+  <section class="work flow">
+    <h3 class="[ work__header ] [ font-sans text-uppercase md:text-500 ] [ leading-tight tracking-loose ]">
+      {{ careers.work }}
+    </h3>
+    <ul class="perks flow">
+      {% for perk in careers.perks %}
+      <li class="perk">
+        <img src="/static/{{ perk.image }}" alt="" />
+        <h4 class="[ font-sans text-uppercase text-300 ] [ leading-fit tracking-loose ]">{{ perk.title }}</h4>
+        <p class="[ text-300 md:text-400 ] [ align-left lg:align-center ]">{{ perk.description }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
   <button type="button" class="button">{{ 'cta' | i18n }}</button>
 </article>
 {% endblock %}
