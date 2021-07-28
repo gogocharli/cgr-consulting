@@ -43,7 +43,7 @@ endmacro %} {% extends './base.html' %} {% block content %}
     {{about.title}}
   </h2>
   <div>
-    <p class="[ text-300 md:text-400 ]">{{about.text}}</p>
+    <p class="[ about__description ] [ text-300 md:text-400 ]">{{about.text}}</p>
   </div>
   <section class="logo-garden">
     <div class="logo">
@@ -53,14 +53,20 @@ endmacro %} {% extends './base.html' %} {% block content %}
   </section>
 </article>
 
-<article id="mission" class="mission wrapper">
-  <h2>{{ mission.title }}</h2>
-  <p>{{ mission.description }}</p>
+<article id="mission" class="mission wrapper flow">
+  <div>
+    <h2 class="
+      [ mission__header ] [ text-550 md:text-700 lg:text-800 ]
+      [ leading-tight md:leading-flat ][ tracking-fit md:tracking-tight lg:tracking-flat ]">
+      {{ mission.title }}
+    </h2>
+    <p class="[ text-300 md:text-400 ]">{{ mission.description }}</p>
+  </div>
   <ul class="objectives">
     {% for goal in mission.objectives %}
-    <li class="goal">
+    <li class="goal align-center">
       <img src="/static/{{ goal.image }}" alt="" />
-      <h3>{{ goal.title }}</h3>
+      <h3 class="[ font-sans ] [ text-300 md:text-400 leading-tight tracking-loose ]">{{ goal.title }}</h3>
       <p>{{ goal.description }}</p>
     </li>
     {% endfor %}
