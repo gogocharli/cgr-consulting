@@ -1,11 +1,69 @@
+{% macro path(pathName, value='', type='text') %}
+  "{{pathName}}/{{value}}"
+{% endmacro %}
+
 {% extends './base.html' %} {% block content %}
-<section class="hero wrapper lg-grid">
+<section class="hero wrapper">
   <div class="hero__content flow">
-    <h1 class="[ hero__heading ] [ text-700 md:text-800 measure-micro ]">
+    <h1 class="[ hero__heading ] [ text-600 md:text-700 ]">
       {{ hero.title }}
     </h1>
-    <p>{{ hero.subtitle }}</p>
-    <p class="[ hero__text ] [ md:text-500 measure-short ]">{{ hero.text }}</p>
+    <img
+      loading="lazy"
+      src="/static/img-hero.jpg"
+      alt=""
+      srcset="/static/img-hero.jpg 1x, /static/img-hero-hd.jpg 2x"
+      height="576"
+      width="1440"
+    />
+    <h2>{{ hero.subtitle }}</h2>
+    {% for text in hero.description  %}
+      <p>{{ text }}</p>
+    {% endfor %}
   </div>
 </section>
+
+<article id="about" class="about">
+  <h2><span>{{about.prefix}}<span>{{about.title}}<h2>
+  <div>
+    <p>{{about.text}}</p>
+  </div>
+  <section class="logo-garden">
+    {% for company in about.logos %}
+      <div class="logo">
+        {% include "logos/logo-" + company + ".svg" %}
+      </div>
+    {% endfor %}
+  </section>
+</article>
+
+<article id="mission" class="mission">
+  <h2>{{ mission.title }}</h2>
+  <p>{{ mission.description }}</p>
+  <ul class="objectives">
+    {% for goal in mission.objectives %}
+      <li class="goal">
+        <img src="{{ goal.image }}" alt="">
+        <h3>{{ goal.title }}</h3>
+        <p>{{ goal.description }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</article>
+
+<article class="join" id="join">
+  <h2>{{ careers.title }}</h2>
+  <p>{{ careers.description }}</p>
+  <h3>{{ careers.work }}</h3>
+  <ul class="perks">
+  {% for perk in careers.perks %}
+    <li class="perk">
+      <img src="{{ perk.image }}" alt="">
+      <h4>{{ perk.title }}</h4>
+      <p>{{ perk.description }}</p>
+    </li>
+  {% endfor %}
+  </ul>
+  <button type="button">{{ 'cta' | i18n }}</button>
+</article>
 {% endblock %}
