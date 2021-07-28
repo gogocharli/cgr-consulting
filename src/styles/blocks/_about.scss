@@ -1,0 +1,33 @@
+.about {
+  --flow-space: 2rem;
+  padding-block: 2.5rem;
+
+  > div {
+    position: relative;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .since {
+    position: absolute;
+    transform: scale(0.3);
+    top: 1rem;
+    left: -3rem;
+  }
+
+  .logo-garden {
+    display: flex;
+    overflow-x: auto;
+
+    > * + * {
+      margin-left: 0.625rem;
+    }
+
+    svg {
+      flex: 0 0 calc(33vw - 2rem);
+    }
+  }
+}

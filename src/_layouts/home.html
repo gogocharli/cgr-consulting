@@ -21,7 +21,7 @@ endmacro %} {% extends './base.html' %} {% block content %}
     <div class="hero__text wrapper flow">
       <h2
         class="
-          [ hero__subtitle ] [ text-400 text-uppercase font-smooth ] [ font-sans leading-tight tracking-loose ]
+          [ hero__subtitle ] [ text-400 text-uppercase ] [ font-sans leading-tight tracking-loose ]
         "
       >
         {{ hero.subtitle }}
@@ -33,9 +33,8 @@ endmacro %} {% extends './base.html' %} {% block content %}
   </div>
 </section>
 
-<article id="about" class="[ about ] [ bg-primary ] [ text-inverted align-center md:align-left ]">
+<article id="about" class="[ about ] [ bg-primary font-smooth ] [ text-inverted align-center md:align-left ]">
   <div class="wrapper flow">
-
     <h2
       class="[ about__header ] [ font-sans text-700 md:text-800 ] [ leading-flat ]"
     >
@@ -52,10 +51,9 @@ endmacro %} {% extends './base.html' %} {% block content %}
       <p class="[ about__description ] [ text-300 md:text-400 ]">{{about.text}}</p>
     </div>
     <div class="logo-garden">
-      <div class="logo">
-        {% for company in about.logos %} {%- include "logos/logo-" + company +
-        ".svg" -%} {% endfor %}
-      </div>
+      {% for company in about.logos %}
+          {%- include "logos/logo-" + company + ".svg" -%}
+      {% endfor %}
     </div>
   </div>
 </article>

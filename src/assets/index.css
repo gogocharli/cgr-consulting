@@ -1250,6 +1250,35 @@ article {
 .hero__text > * {
   --flow-space: 1.25rem;
 }
+.about {
+  --flow-space: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.about > div {
+  position: relative;
+}
+.about__header {
+  display: flex;
+  flex-direction: column;
+}
+.about .since {
+  position: absolute;
+  transform: scale(0.3);
+  top: 1rem;
+  left: -3rem;
+}
+.about .logo-garden {
+  display: flex;
+  overflow-x: auto;
+}
+.about .logo-garden > * + * {
+  margin-left: 0.625rem;
+}
+.about .logo-garden svg {
+  flex: 0 0 calc(33vw - 2rem);
+}
+
 /**
  * FLOW
  * Applies a margin to sibling elements based on a --flow-space custom property.
