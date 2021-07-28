@@ -2,11 +2,18 @@
   background-color: var(--color-primary);
   display: flex;
   inset: 0;
+  opacity: 0;
   padding: 15vh 1rem;
   place-content: center;
+  pointer-events: none;
   position: fixed;
-  transform: translate(100vw, 0);
+  transition: opacity 0.3s ease-out;
   z-index: 10;
+
+  &[aria-hidden='false'] {
+    opacity: 1;
+    pointer-events: all;
+  }
 
   a {
     color: var(--color-white);
@@ -29,10 +36,11 @@
   @include media-query('md') {
     background: 0;
     inset: unset;
+    opacity: 1;
+    pointer-events: all;
     position: static;
     padding: unset;
     display: block;
-    transform: unset;
 
     a {
       color: inherit;
@@ -40,10 +48,6 @@
       letter-spacing: 0.03em;
       text-transform: uppercase;
       text-decoration: none;
-    }
-
-    li:last-of-type a {
-      color: var(--color-white);
     }
 
     &__toggle {

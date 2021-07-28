@@ -14,4 +14,18 @@
 //   validateForm(mainForm, lang);
 // }
 
-console.log('Hello Chris');
+const bodyEl = document.querySelector('body');
+const menuToggle = document.querySelector('#menu-toggle');
+const menu = document.querySelector('#menu');
+
+menuToggle.addEventListener('click', (e) => {
+  bodyEl.classList.toggle('is-menu-open');
+  const isMenuVisible = menuToggle.getAttribute('aria-expanded') == 'true';
+  const newMenuState = !isMenuVisible;
+
+  menuToggle.setAttribute('aria-expanded', !isMenuVisible);
+  menu.setAttribute('aria-hidden', isMenuVisible);
+
+  menuToggle.setAttribute('data-inverted', !isMenuVisible);
+  menuToggle.textContent = isMenuVisible ? 'Menu' : 'Close';
+});

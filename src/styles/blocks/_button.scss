@@ -24,7 +24,7 @@
   }
 
   // Variant for secondary buttons (eg. forms)
-  &[data-variant='inverted'] {
+  &[data-inverted='true'] {
     background-color: get-color('white');
     color: get-color('primary');
 

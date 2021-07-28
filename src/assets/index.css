@@ -1001,6 +1001,10 @@ body {
   font-family: Cirka Regular, Times New Roman, Georgia, serif;
 }
 
+body.is-menu-open {
+  overflow-y: hidden !important;
+}
+
 ::-moz-selection {
   background: rgba(27, 78, 204, 0.4);
 }
@@ -1097,6 +1101,10 @@ article {
   justify-content: space-between;
   width: 100vw;
 }
+.site-head .nav__list .button::before,
+.site-head .nav__list .button::after {
+  display: none;
+}
 @media (min-width: 50em) {
   .site-head__brand svg {
     height: unset;
@@ -1109,6 +1117,10 @@ article {
   .site-head .nav__list li:last-of-type a {
     color: #fbf9f9;
     color: var(--color-white);
+  }
+  .site-head .nav__list .button::before,
+.site-head .nav__list .button::after {
+    display: block;
   }
   .site-head .nav__list > * + * {
     margin-left: 2rem;
@@ -1123,13 +1135,19 @@ article {
   right: 0;
   bottom: 0;
   left: 0;
+  opacity: 0;
   padding: 15vh 1rem;
   align-content: center;
   justify-content: center;
   place-content: center;
+  pointer-events: none;
   position: fixed;
-  transform: translate(100vw, 0);
+  transition: opacity 0.3s ease-out;
   z-index: 10;
+}
+.menu[aria-hidden=false] {
+  opacity: 1;
+  pointer-events: all;
 }
 .menu a {
   color: #fbf9f9;
@@ -1154,10 +1172,11 @@ article {
     right: unset;
     bottom: unset;
     left: unset;
+    opacity: 1;
+    pointer-events: all;
     position: static;
     padding: unset;
     display: block;
-    transform: unset;
   }
   .menu a {
     color: inherit;
@@ -1165,10 +1184,6 @@ article {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     text-decoration: none;
-  }
-  .menu li:last-of-type a {
-    color: #fbf9f9;
-    color: var(--color-white);
   }
   .menu__toggle {
     display: none !important;
@@ -1197,7 +1212,7 @@ article {
 .button:hover {
   transform: scale(1.05);
 }
-.button[data-variant=inverted] {
+.button[data-inverted=true] {
   background-color: #fbf9f9;
   color: #1b4ecc;
   -webkit-font-smoothing: auto;

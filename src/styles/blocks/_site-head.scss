@@ -18,6 +18,11 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100vw;
+
+    .button::before,
+    .button::after {
+      display: none;
+    }
   }
 
   @include media-query('md') {
@@ -34,6 +39,11 @@
 
       li:last-of-type a {
         color: var(--color-white);
+      }
+
+      .button::before,
+      .button::after {
+        display: block;
       }
 
       > * + * {

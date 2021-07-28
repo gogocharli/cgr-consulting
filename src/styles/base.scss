@@ -18,6 +18,10 @@ body {
   @include apply-utility('font', 'serif');
 }
 
+body.is-menu-open {
+  overflow-y: hidden !important;
+}
+
 ::selection {
   background: rgba(get-color('primary'), 0.4);
 }
