@@ -40,7 +40,7 @@ module.exports = function (config) {
 
     dir: {
       input: 'src',
-      output: 'src/__site__',
+      output: '__site__',
       includes: '_includes',
       layouts: '_layouts',
       data: '_data',
