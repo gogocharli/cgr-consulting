@@ -34,6 +34,11 @@ module.exports = function (config) {
     'md',
   ]);
 
+  // Turn off scrolling on any connected device
+  config.setBrowserSyncConfig({
+    ghostMode: false,
+  });
+
   config.addPlugin(i18n, {
     translations,
     fallbackLocales: {
