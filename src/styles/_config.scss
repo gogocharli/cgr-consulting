@@ -102,7 +102,7 @@ $gorko-config: (
       'serif': 'Cirka Regular, Times New Roman, Georgia, serif',
       'serif-light': 'Cirka Light, Times New Roman, Georgia, serif',
       'sans':
-        'Bebas Neue Pro, Helvetica Neue, Helvetica, --apple-system, sans-serif',
+        'bebas-neue-pro, Helvetica Neue, Helvetica, --apple-system, sans-serif',
     ),
     'output': 'standard',
     'property': 'font-family',
@@ -114,8 +114,18 @@ $gorko-config: (
       'tight': 1.1,
       'flat': 1,
     ),
-    'output': 'standard',
+    'output': 'responsive',
     'property': 'line-height',
+  ),
+  'tracking': (
+    'items': (
+      'loose': '0.01em',
+      'fit': '-0.01em',
+      'tight': '-0.02em',
+      'flat': '-0.04em',
+    ),
+    'output': 'responsive',
+    'property': 'letter-spacing',
   ),
   'measure': (
     'items': (
@@ -136,7 +146,7 @@ $gorko-config: (
     'items': (
       'light': 100,
       'normal': 400,
-      'bold': 700,
+      'bold': 600,
     ),
     'output': 'standard',
     'property': 'font-weight',

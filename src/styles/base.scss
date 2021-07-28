@@ -64,6 +64,14 @@ h5 {
   @include apply-utility('leading', 'flat');
 }
 
+p {
+  @include apply-utility('leading', 'fit');
+
+  @include media-query('md') {
+    @include apply-utility('leading', 'loose');
+  }
+}
+
 main {
   --flow-space: 4em;
 
@@ -76,14 +84,7 @@ article {
   scroll-margin-top: 2ex;
 }
 
-@import './blocks/animations';
-@import './blocks/button';
 @import './blocks/skip-link';
-@import './blocks/site-head';
-@import './blocks/site-foot';
-@import './blocks/nav';
-@import './blocks/hero';
-@import './blocks/form';
 
 // Import utilities
 @import './utilities/flow';
@@ -95,3 +96,5 @@ article {
 @import './utilities/explicit-grid';
 @import './utilities/no-list';
 @import './utilities/no-decoration';
+@import './utilities/upper';
+@import './utilities/font-smooth';

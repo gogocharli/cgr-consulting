@@ -4,13 +4,14 @@
  * centers the contents
  */
 .wrapper {
+  --grid-margin: 1rem;
   max-width: 90rem;
-  padding: 0 get-size('300');
+  padding: 0 var(--grid-margin);
   margin-left: auto;
   margin-right: auto;
   position: relative;
 
   @include media-query('md') {
-    padding: 0 get-size('600');
+    --grid-margin: 2.5rem;
   }
 }

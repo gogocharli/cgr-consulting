@@ -3,11 +3,13 @@
 {% endmacro %}
 
 {% extends './base.html' %} {% block content %}
-<section class="hero wrapper">
+<section class="hero">
   <div class="hero__content flow">
-    <h1 class="[ hero__heading ] [ text-600 md:text-700 ]">
-      {{ hero.title }}
-    </h1>
+    <div class="wrapper">
+      <h1 class="[ hero__heading ] [ text-500 md:text-600 lg:text-600 ] [ leading-tight ]">
+        {{ hero.title }}
+      </h1>
+    </div>
     <img
       loading="lazy"
       src="/static/img-hero.jpg"
@@ -16,10 +18,12 @@
       height="576"
       width="1440"
     />
-    <h2>{{ hero.subtitle }}</h2>
-    {% for text in hero.description  %}
-      <p>{{ text }}</p>
-    {% endfor %}
+    <div class="wrapper flow">
+      <h2 class="[ hero__subtitle ] [ text-400 text-uppercase font-smooth weight-bold ] [ font-sans leading-tight tracking-loose ]">{{ hero.subtitle }}</h2>
+      {% for text in hero.description %}
+        <p class="[ hero__description ] [ text-400 leading-loose ]">{{ text }}</p>
+      {% endfor %}
+    </div>
   </div>
 </section>
 
