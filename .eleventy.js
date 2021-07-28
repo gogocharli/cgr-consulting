@@ -11,15 +11,10 @@ const seoOpts = require('./src/_data/seo.json');
 // Transforms
 const htmlMinTransform = require('./src/transforms/html-min-transform');
 
-const isDev = process.env.NODE_ENV === 'development';
+const isDev = process.env.APP_ENV === 'development';
 
 // Webpack settings below
-const manifestPath = path.resolve(
-  __dirname,
-  '__site__',
-  'assets',
-  'manifest.json',
-);
+const manifestPath = path.resolve(__dirname, 'src', 'assets', 'manifest.json');
 
 // Set the manifest as the assets link for build mode
 const manifest = isDev
@@ -51,7 +46,7 @@ module.exports = function (config) {
     if (!manifest['main.js']) return '';
 
     if (isDev) {
-      return `<script src="/assets/main.js" defer></script>`;
+      return `<script src="/assets/index.js" defer></script>`;
     } else {
       return `<script src="${manifest['main.js']}" defer></script>`;
     }
@@ -62,11 +57,11 @@ module.exports = function (config) {
     if (!manifest['main.css']) return '';
 
     if (isDev) {
-      return `<link rel="stylesheet" href="/assets/main.css" />`;
+      return `<link rel="stylesheet" href="/assets/index.css" />`;
     } else {
       const pathToCSSFile = path.resolve(
         __dirname,
-        '__site__',
+        'src',
         'assets',
         manifest['main.css'].split('/')[2],
       );

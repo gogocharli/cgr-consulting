@@ -3,7 +3,7 @@
     "dev": "npm-run-all clean dev:site --parallel dev:assets dev:serve",
     "dev:assets": "APP_ENV=development webpack --mode development --watch",
     "dev:serve": "APP_ENV=development eleventy --serve",
-    "dev:site": "APP_ENV=development webpack --mode development",
+    "dev:site": "APP_ENV=development eleventy",
     "build": "run-s clean build:assets build:site",
     "build:assets": "webpack --mode production",
     "build:site": "eleventy",

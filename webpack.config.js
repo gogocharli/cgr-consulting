@@ -19,7 +19,7 @@ module.exports = {
     path.resolve(__dirname, 'src', 'styles', 'base.scss'),
   ],
   output: {
-    path: path.resolve(__dirname, '__site__', 'assets'),
+    path: path.resolve(__dirname, 'src', 'assets'),
     filename: `${baseFilename}.js`,
   },
   // Process the js with babel and the css with the css and postcss loaders
