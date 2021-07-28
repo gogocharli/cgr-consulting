@@ -17,16 +17,16 @@ mission:
   title: We help deliver your products to a larger pool of customers.
   description: Don’t wait for the perfect opportunity to scale your customer acquisition needs. Leverage our team of sales experts to lead your efforts by meeting new consumers wherever they happen to be.
   objectives:
-    - relationships:
-      image: ''
+    - relationship:
+      image: 'illustrations/relationship.svg'
       title: Build long-lasting relationships
       description: Our team of sales experts take the time to learn the relevant needs of customers during direct interactions. This helps us fulfill those needs appropriatlely with your products.
-    - overheads:
-      image: ''
+    - overhead:
+      image: 'illustrations/overhead.svg'
       title: Avoid expensive overheads
       description: Growing an effective sales strategy takes significant resources over a long period of time. We take care of this expensive process in order for you to focus entirely on your mission.
     - flexibility:
-      image: ''
+      image: 'illustrations/flexibility.svg'
       title: Maximize your flexibility
       description: Quickly adjust your sales workforce on–demand to anticipate market shifts. Respond to competitors’ campaigns. Avoid your sales force being the bottleneck for your new product launches.
 careers:
@@ -35,15 +35,15 @@ careers:
   work: What's working with us like
   perks:
     - guidance:
-      image: 'guidance.svg'
+      image: 'illustrations/guidance.svg'
       title: Supporting Your Success
       description: Whether you are new to sales or have years of experience under your belt, we give you the tools to learn, grow, and succeed. By coaching you whether on-site or remote, teaming up with more experienced colleagues until you’re confident, and attending conferences together, we put all the chips in to make you succeed.
     - growth:
-      image: 'growth.svg'
+      image: 'illustrations/growth.svg'
       title: Helping You Grow
       description: Nurture your skills in a plethora of fields such as time and money management, coaching, public speaking, and a lot more. We actively closely monitor the performance of each team member to ensure they recieve the adequate mentorship. Work with the latest technology and track your own progress overtime as you evolve.
     - benefits:
-      image: 'benefits.svg'
+      image: 'illustrations/benefits.svg'
       title: Learn More & Earn More
       description: Our compensation model encourages self-initiative and consistency. With no ciellings to how much you earn per week, month, year, you have the opportunity to be flexible in your work hours or maximize your income. We offer regular cash bonuses for high performers as well as dinners and social events. Work hard and play even harder!
 ---

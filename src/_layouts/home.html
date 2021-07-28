@@ -30,9 +30,7 @@
   </div>
   <section class="logo-garden">
     {% for company in about.logos %}
-      <div class="logo">
-        {% include "logos/logo-" + company + ".svg" %}
-      </div>
+        {%- include "logos/logo-" + company + ".svg" -%}
     {% endfor %}
   </section>
 </article>
@@ -43,7 +41,7 @@
   <ul class="objectives">
     {% for goal in mission.objectives %}
       <li class="goal">
-        <img src="{{ goal.image }}" alt="">
+        <img src="/static/{{ goal.image }}" alt="">
         <h3>{{ goal.title }}</h3>
         <p>{{ goal.description }}</p>
       </li>
@@ -58,12 +56,12 @@
   <ul class="perks">
   {% for perk in careers.perks %}
     <li class="perk">
-      <img src="{{ perk.image }}" alt="">
+      <img src="/static/{{ perk.image }}" alt="">
       <h4>{{ perk.title }}</h4>
       <p>{{ perk.description }}</p>
     </li>
   {% endfor %}
   </ul>
-  <button type="button">{{ 'cta' | i18n }}</button>
+  <button type="button" class="button">{{ 'cta' | i18n }}</button>
 </article>
 {% endblock %}
