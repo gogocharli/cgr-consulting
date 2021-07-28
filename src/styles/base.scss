@@ -25,6 +25,8 @@ body {
 a:not([class]) {
   color: get-color('primary');
   text-decoration-color: get-color('primary');
+
+  @include apply-utility('font', 'serif-light');
 }
 
 li:not([class]) {
@@ -85,6 +87,9 @@ article {
 }
 
 @import './blocks/skip-link';
+@import './blocks/site-head';
+@import './blocks/menu';
+@import './blocks/button';
 
 // Import utilities
 @import './utilities/flow';

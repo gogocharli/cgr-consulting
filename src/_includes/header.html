@@ -6,11 +6,27 @@
       <div class="site-head__brand" aria-label="Home - Omnium Solutions">
         {% include "logos/cgr-consulting.svg" %}
       </div>
-      <nav class="[ nav ] [ site-head__nav ]">
-        <ul class="nav__list">
-          {% include "main-nav.html" %}
-        </ul>
-      </nav>
+      <div class="menu__wrapper">
+        <button
+          id="menu-toggle"
+          class="[ menu__toggle ] [ button text-uppercase ]"
+          data-highlight="true"
+          aria-expanded="false"
+          aria-labelledby="menu-label"
+        >
+          Menu
+        </button>
+        <nav
+          id="menu"
+          class="[ menu ] [ site-head__nav ]"
+          aria-labelledby="menu-label"
+        >
+          <ul class="nav__list">
+            {% include "main-nav.html" %}
+          </ul>
+        </nav>
+        <span hidden id="menu__label">Main Menu </span>
+      </div>
     </div>
   </div>
 </header>

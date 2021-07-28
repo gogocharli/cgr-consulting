@@ -1,0 +1,53 @@
+.menu {
+  background-color: var(--color-primary);
+  display: flex;
+  inset: 0;
+  padding: 15vh 1rem;
+  place-content: center;
+  position: fixed;
+  transform: translate(100vw, 0);
+  z-index: 10;
+
+  a {
+    color: var(--color-white);
+    display: block;
+    font-size: get-size('550');
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__toggle {
+    letter-spacing: 0.03em;
+    position: relative;
+    z-index: 20;
+  }
+
+  @include media-query('md') {
+    background: 0;
+    inset: unset;
+    position: static;
+    padding: unset;
+    display: block;
+    transform: unset;
+
+    a {
+      color: inherit;
+      font-size: get-size('300');
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    li:last-of-type a {
+      color: var(--color-white);
+    }
+
+    &__toggle {
+      display: none !important;
+    }
+  }
+}

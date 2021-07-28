@@ -1,13 +1,16 @@
 .button {
   @include apply-utility('font', 'serif');
 
-  background-color: get-color('black');
+  background-color: get-color('primary');
+  border-radius: 2rem;
+  border: 0;
   color: get-color('white');
   cursor: pointer;
   display: inline-block;
   font-size: get-size('300');
-  letter-spacing: 0.08em;
-  padding: 0.8rem 1.6rem;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  padding: 0.5rem 1rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -17,19 +20,40 @@
   -moz-osx-font-smoothing: grayscale;
 
   &:hover {
-    // Make sure hover state always applies
-    background-color: get-color('primary') !important;
-    color: get-color('white') !important;
-    border-color: get-color('primary') !important;
+    transform: scale(1.05);
   }
 
   // Variant for secondary buttons (eg. forms)
-  &[data-variant='secondary'] {
+  &[data-variant='inverted'] {
     background-color: get-color('white');
-    border: 1px solid get-color('black');
-    color: get-color('black');
+    color: get-color('primary');
 
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto;
+  }
+
+  &[data-highlight='true'] {
+    --icon-size: 0.5rem;
+    --icon-space: 0.25rem;
+
+    align-items: center;
+    display: flex;
+
+    &::before,
+    &::after {
+      background-image: url('/static/icons/icon-star.svg');
+      content: ' ';
+      fill: currentColor;
+      height: var(--icon-size);
+      width: var(--icon-size);
+    }
+
+    &::before {
+      margin-right: var(--icon-space);
+    }
+
+    &::after {
+      margin-left: var(--icon-space);
+    }
   }
 }

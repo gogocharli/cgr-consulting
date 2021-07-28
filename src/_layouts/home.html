@@ -32,26 +32,29 @@ endmacro %} {% extends './base.html' %} {% block content %}
   </div>
 </section>
 
-<article id="about" class="[ about ] [ wrapper flow bg-primary ] [ text-inverted  align-center md:align-left ]">
-  <h2
-    class="[ about__header ] [ font-sans text-700 md:text-800 ] [ leading-flat ]"
-  >
-    <span
-      class="[ header__prefix ] [ text-400 md:text-500 ] [ leading-tight font-italic ]"
-      >({{about.prefix}})</span
+<article id="about" class="[ about ] [ bg-primary ] [ text-inverted align-center md:align-left ]">
+  <div class="wrapper flow">
+
+    <h2
+      class="[ about__header ] [ font-sans text-700 md:text-800 ] [ leading-flat ]"
     >
-    {{about.title}}
-  </h2>
-  <div class="since">
-    {% include 'illustrations/since-star.svg' %}
-  </div>
-  <div>
-    <p class="[ about__description ] [ text-300 md:text-400 ]">{{about.text}}</p>
-  </div>
-  <div class="logo-garden">
-    <div class="logo">
-      {% for company in about.logos %} {%- include "logos/logo-" + company +
-      ".svg" -%} {% endfor %}
+      <span
+        class="[ header__prefix ] [ text-400 md:text-500 ] [ leading-tight font-italic ]"
+        >({{about.prefix}})</span
+      >
+      {{about.title}}
+    </h2>
+    <div class="since">
+      {% include 'illustrations/since-star.svg' %}
+    </div>
+    <div>
+      <p class="[ about__description ] [ text-300 md:text-400 ]">{{about.text}}</p>
+    </div>
+    <div class="logo-garden">
+      <div class="logo">
+        {% for company in about.logos %} {%- include "logos/logo-" + company +
+        ".svg" -%} {% endfor %}
+      </div>
     </div>
   </div>
 </article>
@@ -69,7 +72,9 @@ endmacro %} {% extends './base.html' %} {% block content %}
     {% for goal in mission.objectives %}
     <li class="goal align-center">
       <img src="/static/{{ goal.image }}" alt="" />
-      <h3 class="[ font-sans ] [ text-300 md:text-400 leading-tight tracking-loose ]">{{ goal.title }}</h3>
+      <h3 class="[ font-sans text-uppercase ] [ text-300 md:text-400 leading-tight tracking-loose ]">
+        {{ goal.title }}
+      </h3>
       <p class="[ text-300 md:text-400 ]">{{ goal.description }}</p>
     </li>
     {% endfor %}

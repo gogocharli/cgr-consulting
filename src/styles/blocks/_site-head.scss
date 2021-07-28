@@ -1,3 +1,44 @@
 .site-head {
-  padding: get-size('400') 0 0;
+  &__inner {
+    align-items: center;
+    border-bottom: 1px solid var(--color-primary);
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+  }
+
+  &__brand {
+    svg {
+      height: 40px;
+    }
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+  }
+
+  @include media-query('md') {
+    &__brand {
+      svg {
+        height: unset;
+      }
+    }
+
+    .nav__list {
+      align-items: center;
+      flex-direction: row;
+      width: unset;
+
+      li:last-of-type a {
+        color: var(--color-white);
+      }
+
+      > * + * {
+        margin-left: 2rem;
+      }
+    }
+  }
 }
