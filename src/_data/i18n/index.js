@@ -25,18 +25,32 @@ module.exports = {
     en: 'Apply Now',
     fr: 'Appliquez Maintenant',
   },
-  form: {
+  footer: {
     title: {
-      en: 'Start growing faster',
-      fr: 'Commencez votre expansion',
+      en: 'Looking for ways to reach us?',
+      fr: 'Vous cherchez à nous joindre?',
     },
-    subtitle: {
-      en: "Sales shouldn't be hard",
-      fr: 'La vente ne devrait pas être ardue',
+    phone: {
+      en: 'Telephone',
+      fr: 'Télephone',
     },
-    name: {
-      en: 'Full name',
-      fr: 'Nom complet',
+    social: {
+      en: 'Social Media',
+      fr: 'Médias Sociaux',
+    },
+    address: {
+      en: 'Address',
+      fr: 'Adresse',
+    },
+  },
+  form: {
+    firstName: {
+      en: 'First Name',
+      fr: 'Prénom',
+    },
+    lastName: {
+      en: 'Last Name',
+      fr: 'Nom de Famille',
     },
     company: {
       en: 'Company',

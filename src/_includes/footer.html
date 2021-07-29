@@ -1,7 +1,37 @@
-<footer class="site-foot wrapper">
-  <div class="site-foot__content">
-    <p class="copyright">
-      &copy; Omnium Concept Inc. 2005 - {{ helpers.currentYear() }}
-    </p>
+<footer class="site-foot">
+  <div class="[ site-foot__content ] [ wrapper bg-primary font-smooth text-inverted ]">
+    <div class="text-illustration">
+      <h2 class="site-foot__header">
+        {{ 'footer.title' | i18n }}
+      </h2>
+      <img
+      loading="lazy"
+      class="footer__image"
+      src="/static/illustrations/laptop.svg"
+      alt=""
+      height="311"
+      width="465"
+    />
+    </div>
+    <div class="contact">
+      <div class="contact__phone">
+        <h3 class="">{{ 'footer.phone' | i18n }}</h3>
+        <a href="tel:{{ site.phoneNumber }}">{{ site.phoneNumber }}</a>
+      </div>
+      <div class="contact__email">
+        <h3 class="">Email</h3>
+        <a href="email:{{ site.email }}">{{ site.email }}</a>
+      </div>
+      <div class="contact__social">
+        <h3 class="">{{ 'footer.social' | i18n }}</h3>
+        <a href="{{ site.social.instagram }}">Instagram</a>
+        <a href="{{ site.social.facebook }}">Facebook</a>
+        <a href="{{ site.social.linkedIn }}">LinkedIn</a>
+      </div>
+      <div class="contact__address">
+        <h3 class="">{{ 'footer.address' | i18n }}</h3>
+        <p>{{ site.address }}</p>
+      </div>
+    </div>
   </div>
 </footer>

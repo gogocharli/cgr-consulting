@@ -29,3 +29,14 @@ menuToggle.addEventListener('click', (e) => {
   menuToggle.setAttribute('data-inverted', !isMenuVisible);
   menuToggle.textContent = isMenuVisible ? 'Menu' : 'Close';
 });
+
+const menuItems = menu.querySelector('ul');
+
+menuItems.addEventListener('click', (e) => {
+  bodyEl.classList.remove('is-menu-open');
+
+  menuToggle.setAttribute('aria-expanded', false);
+  menu.setAttribute('aria-hidden', true);
+  menuToggle.setAttribute('data-inverted', false);
+  menuToggle.textContent = 'Menu';
+});
