@@ -56,11 +56,8 @@
   }
 
   @include media-query('md') {
+    border-radius: 0.5rem;
     background-color: var(--color-white);
-
-    > div {
-      border-radius: 0.5rem;
-    }
 
     &__image {
       width: 25rem;
