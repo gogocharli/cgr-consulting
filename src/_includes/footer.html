@@ -1,8 +1,8 @@
-<footer class="site-foot">
+<footer id="contact" class="site-foot">
   <div class="[ site-foot__content ] [ wrapper bg-primary font-smooth text-inverted ]">
     <div class="text-illustration">
       <h2 class="
-        [ site-foot__header ] [ text-550 md:text-700 lg:text-800 ]
+        [ site-foot__header ] [ text-550 md:text-700 lg:text-800 align-center md:align-left ]
         [ leading-tight md:leading-flat ] [ tracking-fit lg:tracking-flat ]
         "
         >
@@ -10,25 +10,25 @@
       </h2>
       <img
       loading="lazy"
-      class="footer__image"
+      class="site-foot__image"
       src="/static/illustrations/laptop.svg"
       alt=""
       height="311"
       width="465"
     />
     </div>
-    <div class="contact">
+    <address class="contact">
       <div class="contact__phone">
         <h3 class="[ contact__title ]">
           {{ 'footer.phone' | i18n }}
         </h3>
-        <a href="tel:{{ site.phoneNumber }}">{{ site.phoneNumber }}</a>
+        <a href="tel:+1{{ site.phoneNumber.split('-').join('') }}">{{ site.phoneNumber }}</a>
       </div>
       <div class="contact__email">
         <h3 class="[ contact__title ]">
           Email
         </h3>
-        <a href="email:{{ site.email }}">{{ site.email }}</a>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
       </div>
       <div class="contact__social">
         <h3 class="[ contact__title ]">
@@ -44,6 +44,6 @@
         </h3>
         <p>{{ site.address }}</p>
       </div>
-    </div>
+    </address>
   </div>
 </footer>

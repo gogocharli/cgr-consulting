@@ -1,16 +1,29 @@
 .site-foot {
+  --flow-space: 2.5rem;
   margin-top: 5rem;
 
   > div {
-    padding-block: 2.5rem;
+    padding-block: var(--flow-space);
+  }
+
+  .text-illustration {
+    margin-bottom: var(--flow-space);
+  }
+
+  &__image {
+    margin: var(--flow-space) auto 0;
+    width: 44vw;
+    height: 29vw;
   }
 
   .contact {
     display: flex;
     flex-wrap: wrap;
+    font-style: normal;
 
     > * {
       flex: 1 1 50%;
+      margin-bottom: 2.5rem;
     }
 
     a,
@@ -20,8 +33,19 @@
       @include apply-utility('leading', 'loose');
     }
 
+    a {
+      display: block;
+      text-decoration: none;
+    }
+
+    a + a {
+      margin-top: 0.25rem;
+    }
+
     &__title {
+      color: get-color('gray-5');
       font-size: get-size('300');
+      margin-bottom: 1.25rem;
       text-transform: uppercase;
 
       @include apply-utility('font', 'sans');
