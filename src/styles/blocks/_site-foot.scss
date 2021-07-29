@@ -1,6 +1,8 @@
 .site-foot {
   --flow-space: 2.5rem;
+  background-color: var(--color-primary);
   margin-top: 5rem;
+  margin-bottom: 2rem;
 
   > div {
     padding-block: var(--flow-space);
@@ -54,7 +56,34 @@
   }
 
   @include media-query('md') {
+    background-color: var(--color-white);
+
+    > div {
+      border-radius: 0.5rem;
+    }
+
+    &__image {
+      width: 25rem;
+    }
+
+    .text-illustration {
+      grid-column: 2 / -2;
+    }
+
     .contact {
+      margin-top: 3rem;
+      grid-column: 3 / -1;
+
+      > *:nth-child(odd) {
+        flex: 0 1 33%;
+      }
+
+      > *:last-child {
+        p {
+          max-width: 18ch;
+        }
+      }
+
       a,
       p {
         font-size: get-size('400');
@@ -63,6 +92,29 @@
       &__title {
         font-size: get-size('400');
       }
+    }
+  }
+
+  @include media-query('lg') {
+    .text-illustration {
+      align-items: center;
+      display: flex;
+    }
+
+    &__header {
+      max-width: 8ch;
+    }
+
+    &__image {
+      flex-basis: 40%;
+      margin: 0 0 0 1.25rem;
+      height: 20.5rem;
+    }
+
+    .contact {
+      grid-column: 2 / -2;
+      display: grid;
+      grid-template-columns: repeat(4, auto);
     }
   }
 }

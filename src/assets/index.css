@@ -1136,7 +1136,10 @@ article {
 
 .site-foot {
   --flow-space: 2.5rem;
+  background-color: #1b4ecc;
+  background-color: var(--color-primary);
   margin-top: 5rem;
+  margin-bottom: 2rem;
 }
 .site-foot > div {
   padding-top: var(--flow-space);
@@ -1182,12 +1185,54 @@ article {
   line-height: 1.1;
 }
 @media (min-width: 50em) {
+  .site-foot {
+    background-color: #fbf9f9;
+    background-color: var(--color-white);
+  }
+  .site-foot > div {
+    border-radius: 0.5rem;
+  }
+  .site-foot__image {
+    width: 25rem;
+  }
+  .site-foot .text-illustration {
+    grid-column: 2/-2;
+  }
+  .site-foot .contact {
+    margin-top: 3rem;
+    grid-column: 3/-1;
+  }
+  .site-foot .contact > *:nth-child(odd) {
+    flex: 0 1 33%;
+  }
+  .site-foot .contact > *:last-child p {
+    max-width: 18ch;
+  }
   .site-foot .contact a,
 .site-foot .contact p {
     font-size: 1.375rem;
   }
   .site-foot .contact__title {
     font-size: 1.375rem;
+  }
+}
+@media (min-width: 65em) {
+  .site-foot .text-illustration {
+    align-items: center;
+    display: flex;
+  }
+  .site-foot__header {
+    max-width: 8ch;
+  }
+  .site-foot__image {
+    flex-basis: 40%;
+    margin: 0 0 0 1.25rem;
+    height: 20.5rem;
+  }
+  .site-foot .contact {
+    grid-column: 2/-2;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
   }
 }
 
