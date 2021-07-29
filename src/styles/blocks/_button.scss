@@ -20,7 +20,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   &:hover {
-    transform: scale(1.05);
+    background-color: get-color('primary-shade');
   }
 
   // Variant for secondary buttons (eg. forms)
@@ -30,6 +30,10 @@
 
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto;
+
+    &:hover {
+      background-color: get-color('gray-5');
+    }
   }
 
   &[data-highlight='true'] {

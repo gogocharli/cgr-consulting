@@ -1,0 +1,11 @@
+.standard-grid {
+  @include media-query('md') {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 1.25rem;
+  }
+
+  @include media-query('lg') {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}

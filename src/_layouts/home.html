@@ -2,9 +2,9 @@
 endmacro %} {% extends './base.html' %} {% block content %}
 <section class="hero">
   <div class="hero__content flow">
-    <div class="wrapper">
+    <div class="wrapper triple-grid">
       <h1
-        class="[ hero__heading ] [ text-500 md:text-600 lg:text-600 ] [ leading-tight ]"
+        class="[ hero__heading ] [ text-500 md:text-600 lg:text-700 ] [ leading-tight md:leading-flat measure-short ]"
       >
         {{ hero.title }}
       </h1>
@@ -18,7 +18,7 @@ endmacro %} {% extends './base.html' %} {% block content %}
       height="576"
       width="1440"
     />
-    <div class="hero__text wrapper flow">
+    <div class="hero__text wrapper flow triple-grid">
       <h2
         class="
           [ hero__subtitle ] [ text-400 text-uppercase ] [ font-sans leading-tight tracking-loose ]
@@ -27,7 +27,7 @@ endmacro %} {% extends './base.html' %} {% block content %}
         {{ hero.subtitle }}
       </h2>
       {% for text in hero.description %}
-      <p class="[ hero__description ] [ text-400 leading-loose ]">{{ text }}</p>
+      <p class="[ hero__description ] [ text-400 leading-loose measure-long ]">{{ text }}</p>
       {% endfor %}
     </div>
   </div>
