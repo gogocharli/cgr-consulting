@@ -90,19 +90,21 @@ endmacro %} {% extends './base.html' %} {% block content %}
     <p class="[ join__description ] [ text-300 md:text-400 ]">{{ careers.description }}</p>
   </div>
   <section class="work flow">
-    <h3 class="[ work__header ] [ font-sans text-uppercase md:text-500 ] [ leading-tight tracking-loose ]">
+    <h3 class="[ work__header ] [ font-sans text-uppercase text-400  md:text-500 ] [ leading-tight tracking-loose ]">
       {{ careers.work }}
     </h3>
     <ul class="perks flow">
       {% for perk in careers.perks %}
       <li class="perk">
-        <img src="/static/{{ perk.image }}" alt="" />
-        <h4 class="[ font-sans text-uppercase text-300 ] [ leading-fit tracking-loose ]">{{ perk.title }}</h4>
+        <div class="perk__heading">
+          <img src="/static/{{ perk.image }}" alt="" />
+          <h4 class="[ font-sans text-uppercase text-300 ] [ leading-fit tracking-loose ]">{{ perk.title }}</h4>
+        </div>
         <p class="[ text-300 md:text-400 ] [ align-left lg:align-center ]">{{ perk.description }}</p>
       </li>
       {% endfor %}
     </ul>
   </section>
-  <button type="button" class="button">{{ 'cta' | i18n }}</button>
+  <button id="modal-toggle" type="button" class="join__button button" aria-expanded="false">{{ 'cta' | i18n }}</button>
 </article>
 {% endblock %}

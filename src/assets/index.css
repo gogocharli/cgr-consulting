@@ -1297,6 +1297,37 @@ article {
   margin-right: auto;
 }
 
+.join > div {
+  --flow-space: 1rem;
+}
+.join .work__header {
+  border-top: 1px solid #1b4ecc;
+  border-top: 1px solid var(--color-primary);
+  border-bottom: 1px solid #1b4ecc;
+  border-bottom: 1px solid var(--color-primary);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.join .perks {
+  margin-top: 2.5rem;
+}
+.join .perk__heading img {
+  height: 11.875rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.join .perk__heading h4 {
+  margin-top: 1.25rem;
+}
+.join .perk p {
+  margin-top: 1.25rem;
+}
+.join__button {
+  margin-left: auto;
+  margin-right: auto;
+  transform: scale(1.4);
+}
+
 /**
  * FLOW
  * Applies a margin to sibling elements based on a --flow-space custom property.
