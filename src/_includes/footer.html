@@ -1,7 +1,11 @@
 <footer class="site-foot">
   <div class="[ site-foot__content ] [ wrapper bg-primary font-smooth text-inverted ]">
     <div class="text-illustration">
-      <h2 class="site-foot__header">
+      <h2 class="
+        [ site-foot__header ] [ text-550 md:text-700 lg:text-800 ]
+        [ leading-tight md:leading-flat ] [ tracking-fit lg:tracking-flat ]
+        "
+        >
         {{ 'footer.title' | i18n }}
       </h2>
       <img
@@ -15,21 +19,29 @@
     </div>
     <div class="contact">
       <div class="contact__phone">
-        <h3 class="">{{ 'footer.phone' | i18n }}</h3>
+        <h3 class="[ contact__title ]">
+          {{ 'footer.phone' | i18n }}
+        </h3>
         <a href="tel:{{ site.phoneNumber }}">{{ site.phoneNumber }}</a>
       </div>
       <div class="contact__email">
-        <h3 class="">Email</h3>
+        <h3 class="[ contact__title ]">
+          Email
+        </h3>
         <a href="email:{{ site.email }}">{{ site.email }}</a>
       </div>
       <div class="contact__social">
-        <h3 class="">{{ 'footer.social' | i18n }}</h3>
+        <h3 class="[ contact__title ]">
+          {{ 'footer.social' | i18n }}
+        </h3>
         <a href="{{ site.social.instagram }}">Instagram</a>
         <a href="{{ site.social.facebook }}">Facebook</a>
         <a href="{{ site.social.linkedIn }}">LinkedIn</a>
       </div>
       <div class="contact__address">
-        <h3 class="">{{ 'footer.address' | i18n }}</h3>
+        <h3 class="[ contact__title ]">
+          {{ 'footer.address' | i18n }}
+        </h3>
         <p>{{ site.address }}</p>
       </div>
     </div>

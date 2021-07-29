@@ -1127,6 +1127,43 @@ article {
   }
 }
 
+.site-foot {
+  margin-top: 5rem;
+}
+.site-foot > div {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.site-foot .contact {
+  display: flex;
+  flex-wrap: wrap;
+}
+.site-foot .contact > * {
+  flex: 1 1 50%;
+}
+.site-foot .contact a,
+.site-foot .contact p {
+  color: #fbf9f9;
+  color: var(--color-white);
+  font-size: 0.999625rem;
+  line-height: 1.3;
+}
+.site-foot .contact__title {
+  font-size: 0.999625rem;
+  text-transform: uppercase;
+  font-family: bebas-neue-pro, Helvetica Neue, Helvetica, --apple-system, sans-serif;
+  line-height: 1.1;
+}
+@media (min-width: 50em) {
+  .site-foot .contact a,
+.site-foot .contact p {
+    font-size: 1.375rem;
+  }
+  .site-foot .contact__title {
+    font-size: 1.375rem;
+  }
+}
+
 .menu {
   background-color: #1b4ecc;
   background-color: var(--color-primary);

@@ -1,2 +1,44 @@
 .site-foot {
+  margin-top: 5rem;
+
+  > div {
+    padding-block: 2.5rem;
+  }
+
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+      flex: 1 1 50%;
+    }
+
+    a,
+    p {
+      color: var(--color-white);
+      font-size: get-size('300');
+      @include apply-utility('leading', 'loose');
+    }
+
+    &__title {
+      font-size: get-size('300');
+      text-transform: uppercase;
+
+      @include apply-utility('font', 'sans');
+      @include apply-utility('leading', 'tight');
+    }
+  }
+
+  @include media-query('md') {
+    .contact {
+      a,
+      p {
+        font-size: get-size('400');
+      }
+
+      &__title {
+        font-size: get-size('400');
+      }
+    }
+  }
 }
