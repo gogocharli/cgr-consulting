@@ -62,12 +62,12 @@ endmacro %} {% extends './base.html' %} {% block content %}
   <div class="mission__text">
     <h2 class="
       [ mission__header ] [ text-550 md:text-700 lg:text-800 ]
-      [ leading-tight md:leading-flat ][ tracking-fit md:tracking-tight lg:tracking-flat ]">
+      [ leading-tight md:leading-flat ][ tracking-fit lg:tracking-flat ]">
       {{ mission.title }}
     </h2>
-    <p class="[ text-300 md:text-400 ]">{{ mission.description }}</p>
+    <p class="[ text-300 md:text-400 measure-short ]">{{ mission.description }}</p>
   </div>
-  <ul class="objectives">
+  <ul class="objectives triple-grid">
     {% for goal in mission.objectives %}
     <li class="[ goal ] [ align-center flow ]">
       <img src="/static/{{ goal.image }}" alt="" />

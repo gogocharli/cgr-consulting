@@ -21,4 +21,63 @@
       }
     }
   }
+
+  @include media-query('md') {
+    &__text,
+    .objectives {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      grid-column-gap: 1.25rem;
+    }
+
+    &__text {
+      p {
+        align-self: center;
+        grid-column: 7 / span 3;
+        margin-top: 0;
+      }
+    }
+
+    &__header {
+      grid-column: 1 / span 6;
+    }
+
+    .objectives {
+      margin-top: 4rem;
+
+      li {
+        --flow-space: 1.25rem;
+
+        grid-column: 3 / span 5;
+
+        img {
+          height: 7rem;
+        }
+      }
+    }
+  }
+
+  @include media-query('lg') {
+    &__text {
+      p {
+        grid-column: 7 / span 2;
+      }
+    }
+
+    &__header {
+      grid-column: 2 / span 5;
+    }
+
+    .objectives {
+      margin-top: 5.5rem;
+
+      > * + * {
+        margin-top: 0;
+      }
+
+      li {
+        grid-column: span 3;
+      }
+    }
+  }
 }

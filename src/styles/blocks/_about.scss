@@ -32,6 +32,8 @@
   }
 
   @include media-query('md') {
+    --flow-space: 4rem;
+
     &__wrapper {
       > * {
         grid-column: 1 / -1;
