@@ -5,6 +5,10 @@
     --flow-space: 1rem;
   }
 
+  &__description {
+    margin-inline: auto;
+  }
+
   .work__header {
     border-top: 1px solid var(--color-primary);
     border-bottom: 1px solid var(--color-primary);
