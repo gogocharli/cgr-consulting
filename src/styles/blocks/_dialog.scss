@@ -1,21 +1,31 @@
 .dialog {
-  display: grid;
+  display: none;
   height: 100vh;
   left: 0;
   margin: 0 !important;
   padding-inline: 1rem;
   place-content: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100vw;
   z-index: 100;
 
+  &.is-visible {
+    display: grid;
+  }
+
   &__overlay {
     background-color: var(--color-primary-tint);
-    opacity: 0.5;
+    opacity: 0;
     inset: 0;
     pointer-events: none;
     position: absolute;
+
+    transition: opacity 0.3s ease-out;
+  }
+
+  &.is-visible &__overlay {
+    opacity: 0.5;
   }
 
   &__content {
@@ -28,9 +38,19 @@
     width: calc(100vw - 2rem);
     z-index: 10;
 
+    opacity: 1;
+    transform: translate(0, 20px);
+    transition: all 0.25s ease-out;
+    transition-delay: 0.3s;
+
     > * {
       align-self: center;
     }
+  }
+
+  &.is-visible &__content {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 
   &__close {

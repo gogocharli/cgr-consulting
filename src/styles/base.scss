@@ -18,7 +18,7 @@ body {
   @include apply-utility('font', 'serif');
 }
 
-body.is-modal {
+body.is-modal-open {
   overflow-y: hidden !important;
 }
 

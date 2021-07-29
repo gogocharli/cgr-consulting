@@ -105,7 +105,7 @@ endmacro %} {% extends './base.html' %} {% block content %}
       {% endfor %}
     </ul>
   </section>
-  <button id="modal-toggle" type="button" class="join__button button" aria-expanded="false">{{ 'cta' | i18n }}</button>
+  <button id="modal-toggle" type="button" class="modal__toggle button" aria-expanded="false">{{ 'cta' | i18n }}</button>
   {% include 'dialog.html' %}
 </article>
 {% endblock %}
