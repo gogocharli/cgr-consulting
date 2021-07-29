@@ -1008,7 +1008,7 @@ body {
   font-family: Cirka Regular, Times New Roman, Georgia, serif;
 }
 
-body.is-menu-open {
+body.is-modal {
   overflow-y: hidden !important;
 }
 
@@ -1653,14 +1653,120 @@ article {
   }
 }
 
+.form {
+  border-radius: 0.5rem;
+  background-color: #1b4ecc;
+  background-color: var(--color-primary);
+  color: #fbf9f9;
+}
+.form form {
+  --flow-space: 2rem;
+  /* Make sure the font smoothing doesn't change in this element */
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 3rem 1.5rem;
+  position: relative;
+}
+.form .field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.form .field label {
+  font-family: bebas-neue-pro, Helvetica Neue, Helvetica, --apple-system, sans-serif;
+  letter-spacing: 0.01em;
+  align-items: center;
+  color: #f0ebeb;
+  color: var(--color-gray-5);
+  display: flex;
+  text-transform: uppercase;
+}
+.form .field input {
+  line-height: 1;
+  background-color: #1b4ecc;
+  background-color: var(--color-primary);
+  border: 0;
+  border-bottom: 1px solid #fbf9f9;
+  border-bottom: 1px solid var(--color-white);
+  color: #fbf9f9;
+  color: var(--color-white);
+  font-size: 1.375rem;
+  margin-top: 0.75rem;
+  padding: 0 0 0.25rem;
+}
+.form .field input:focus {
+  border-color: transparent;
+  box-shadow: 0 2px 0 #fbf9f9;
+  outline: none;
+}
+.form .field input::-moz-placeholder {
+  opacity: 0;
+}
+.form .field input:-ms-input-placeholder {
+  opacity: 0;
+}
+.form .field input::placeholder {
+  opacity: 0;
+}
+.form .buttons {
+  margin-top: 2rem;
+}
+.form input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  color: #0a0505;
+}
+.form input[type=submit],
+.form input[type=file] {
+  border: 0;
+  border-radius: 2px;
+}
+.form label.button {
+  border-radius: 2px;
+  display: block;
+  line-height: inherit;
+  margin-top: 0;
+}
+.form .file {
+  margin-top: 0;
+}
+.form .file[focus-within] {
+  outline: 2px dashed #fbf9f9;
+  outline-offset: 0.25rem;
+}
+.form .file:focus-within {
+  outline: 2px dashed #fbf9f9;
+  outline-offset: 0.25rem;
+}
+.form input[type=submit] {
+  background-color: #fbf9f9;
+  border-radius: 2rem;
+  color: #1b4ecc;
+  margin: 1rem 0 0;
+}
+@media (min-width: 50em) {
+  .form {
+    display: flex;
+    align-items: center;
+  }
+}
 .dialog {
-  top: 0;
-  right: 0;
-  bottom: 0;
+  display: grid;
+  height: 100vh;
   left: 0;
   margin: 0 !important;
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-content: center;
+  justify-content: center;
+  place-content: center;
   position: absolute;
+  top: 0;
+  width: 100vw;
   z-index: 100;
 }
 .dialog__overlay {
@@ -1678,7 +1784,12 @@ article {
   background-color: #fbf9f9;
   background-color: var(--color-white);
   border-radius: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: calc(100vh - 2rem);
+  max-width: 90rem;
   position: relative;
+  width: calc(100vw - 2rem);
   z-index: 10;
 }
 .dialog__content > * {
@@ -1686,20 +1797,53 @@ article {
 }
 .dialog__close {
   position: absolute;
-  right: 2rem;
-  top: 2rem;
+  right: 1rem;
+  top: 1rem;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  background: 0;
+  width: 2rem;
+  height: 2rem;
+}
+.dialog__close svg {
+  height: 100%;
+  width: 100%;
+}
+.dialog__close svg > * {
+  stroke: #fbf9f9;
+  stroke: var(--color-white);
+}
+.dialog__close:hover svg > * {
+  stroke: #e1dbdb;
+  stroke: var(--color-gray-4);
 }
 .dialog .signup-intro {
   display: none;
 }
 @media (min-width: 50em) {
   .dialog {
-    padding: 2.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .dialog .form {
+    grid-column: 1/-1;
+  }
+  .dialog__content {
+    width: calc(100vw - 5rem);
+  }
+  .dialog__close {
+    right: 2rem;
+    top: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
 @media (min-width: 65em) {
   .dialog__content {
     padding: 7rem 0;
+    width: auto;
   }
   .dialog__title {
     margin-bottom: 3rem;
@@ -1713,10 +1857,14 @@ article {
   .dialog .form {
     grid-column: 7/span 5;
   }
-}
-
-body {
-  overflow: hidden !important;
+  .dialog__close svg > * {
+    stroke: #1b4ecc;
+    stroke: var(--color-primary);
+  }
+  .dialog__close:hover svg > * {
+    stroke: #123c98;
+    stroke: var(--color-primary-shade);
+  }
 }
 
 /**

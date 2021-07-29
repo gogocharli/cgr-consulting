@@ -6,7 +6,7 @@
     class="flow text-inverted bg-primary"
   >
     <div class="field" data-field="0">
-      <label for="firstName" class="text-300">
+      <label for="firstName" class="text-400">
         <span class="field-label">{{ 'form.firstName' | i18n }}</span>
       </label>
       <input
@@ -17,11 +17,10 @@
         placeholder="John"
         required
       />
-      <span class="field__error">Error Message</span>
     </div>
 
     <div class="field" data-field="1">
-      <label for="lastName" class="text-300">
+      <label for="lastName" class="text-400">
         <span class="field-label">{{ 'form.lastName' | i18n }}</span>
       </label>
       <input
@@ -32,11 +31,10 @@
         placeholder="Doe"
         required
       />
-      <span class="field__error">Error Message</span>
     </div>
 
     <div class="field" data-field="2">
-      <label for="email" class="text-300">
+      <label for="email" class="text-400">
         <span class="field-label">{{ 'form.email' | i18n }}</span>
       </label>
       <input
@@ -47,11 +45,10 @@
         placeholder="inquiries@cgr-consulting.ca"
         required
       />
-      <span class="field__error">Error Message</span>
     </div>
 
     <div class="field" data-field="3">
-      <label for="phone" class="text-300">
+      <label for="phone" class="text-400">
         <span class="field-label">{{ 'form.phone' | i18n }}</span>
       </label>
       <input
@@ -64,22 +61,23 @@
         placeholder="8881234567"
         required
       />
-      <span class="field__error">Error Message</span>
     </div>
 
-    <div class="field file">
-      <label for="file" class="button" data-variant="secondary">
-        <span class="field-label">{{ 'form.upload' | i18n }}</span>
-      </label>
-      <input
-        class="visually-hidden"
-        type="file"
-        name="file"
-        id="file"
-        accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.pdf"
-      />
-    </div>
+    <div class="buttons">
+      <div class="field file">
+        <label for="file" class="button" data-variant="secondary">
+          <span class="field-label font-serif">{{ 'form.upload' | i18n }}</span>
+        </label>
+        <input
+          class="visually-hidden"
+          type="file"
+          name="file"
+          id="file"
+          accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.pdf"
+        />
+      </div>
 
-    <input type="submit" class="button" value="{{ 'form.submit' | i18n }}" />
+      <input type="submit" class="button" value="{{ 'form.submit' | i18n }}" />
+    </div>
   </form>
 </div>

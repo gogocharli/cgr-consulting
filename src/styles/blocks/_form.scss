@@ -1,22 +1,20 @@
 .form {
   border-radius: 0.5rem;
+  background-color: var(--color-primary);
   color: get-color('white');
 
-  &__subtitle {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-
   form {
-    --flow-space: 1.6em;
+    --flow-space: 2rem;
 
     /* Make sure the font smoothing doesn't change in this element */
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto;
 
+    border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
-    padding: 2.5em 1em;
+    flex-grow: 1;
+    padding: 3rem 1.5rem;
     position: relative;
   }
 
@@ -26,40 +24,40 @@
     position: relative;
 
     label {
-      align-items: center;
-      display: flex;
-    }
+      @include apply-utility('font', 'sans');
+      @include apply-utility('tracking', 'loose');
 
-    &__message {
-      position: absolute;
-      right: 0;
-      left: auto;
-      line-height: 0;
-      top: 1px;
-      visibility: hidden;
+      align-items: center;
+      color: var(--color-gray-5);
+      display: flex;
+      text-transform: uppercase;
     }
 
     input {
       @include apply-utility('leading', 'flat');
 
+      background-color: var(--color-primary);
       border: 0;
-      border-bottom: 1px solid get-color('black');
-      padding: 0.35em 0 0.1em;
+      border-bottom: 1px solid var(--color-white);
+      color: var(--color-white);
+      font-size: get-size('400');
+      margin-top: 0.75rem;
+      padding: 0 0 0.25rem;
 
       &:focus {
         border-color: transparent;
-        box-shadow: 0 4px 0 get-color('primary');
+        box-shadow: 0 2px 0 get-color('white');
         outline: none;
       }
 
       &::placeholder {
         opacity: 0;
       }
-
-      &:not(:placeholder-shown):invalid ~ &__message {
-        visibility: visible;
-      }
     }
+  }
+
+  .buttons {
+    margin-top: 2rem;
   }
 
   input {
@@ -78,74 +76,30 @@
     border-radius: 2px;
     display: block;
     line-height: inherit;
+    margin-top: 0;
+  }
+
+  .file {
+    margin-top: 0;
   }
 
   .file:focus-within {
-    outline: 2px dashed get-color('primary');
+    outline: 2px dashed get-color('white');
     outline-offset: 0.25rem;
   }
 
   input[type='submit'] {
-    color: get-color('white');
-    margin-left: 0;
-    margin-right: 0;
+    background-color: get-color('white');
+    border-radius: 2rem;
+    color: get-color('primary');
+    margin: 1rem 0 0;
   }
 
   @include media-query('md') {
     display: flex;
     align-items: center;
-
-    form {
-      flex-basis: 56%;
-      padding: 2em 2.75em;
-
-      &[data-variant='full'] {
-        flex-basis: 100%;
-      }
-
-      &[data-size='full'] {
-        flex-basis: 100%;
-      }
-
-      &:not([data-size='full']) {
-        input[type='submit'] {
-          --flow-space: #{get-size('600')};
-        }
-      }
-    }
-
-    .field {
-      &[data-variant='error'] {
-        input {
-          border-color: transparent;
-          box-shadow: 0 2px 0 get-color('error');
-
-          &:focus {
-            box-shadow: 0 2px 0 get-color('error');
-          }
-        }
-      }
-    }
   }
 
   @include media-query('lg') {
-    form {
-      padding: 2em 3em;
-    }
-
-    .field {
-      input {
-        margin-top: 0.5em;
-        padding: 0.7em 0 0.2em;
-      }
-
-      &.file {
-        margin-top: 2em;
-      }
-    }
-
-    .button {
-      padding: 1rem 1.6rem;
-    }
   }
 }
