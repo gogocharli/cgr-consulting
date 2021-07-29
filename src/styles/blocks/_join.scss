@@ -1,4 +1,6 @@
 .join {
+  --flow-space: 2.5rem;
+
   > div {
     --flow-space: 1rem;
   }
@@ -33,5 +35,94 @@
   &__button {
     margin-inline: auto;
     transform: scale(1.4);
+  }
+
+  @include media-query('md') {
+    --flow-space: 4rem;
+
+    > div {
+      --flow-space: 1.5rem;
+
+      > * {
+        margin-inline: auto;
+      }
+    }
+
+    .perks {
+      margin-top: 4rem;
+    }
+
+    .perk {
+      align-items: center;
+      display: flex;
+      grid-column: 1 / -1;
+      justify-content: space-between;
+
+      &:nth-child(2n) {
+        flex-direction: row-reverse;
+      }
+
+      &__header,
+      p {
+        flex-basis: 50%;
+      }
+
+      &__heading {
+        img {
+          max-width: 20rem;
+        }
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .button {
+      margin-top: 5rem;
+    }
+  }
+
+  @include media-query('lg') {
+    > div {
+      --flow-space: 2.5rem;
+
+      p {
+        max-width: 54ch;
+      }
+    }
+
+    .perk {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      grid-column: 4 / span 6;
+      justify-content: center;
+      width: 100%;
+
+      &:nth-child(3n) {
+        grid-column: 7 / span 5;
+      }
+
+      &:nth-child(2n) {
+        flex-direction: column;
+        grid-column: 2 / span 5;
+      }
+
+      &__header,
+      p {
+        flex-basis: 100%;
+      }
+
+      &__heading {
+        img {
+          max-width: unset;
+        }
+      }
+
+      p {
+        margin-top: 1.25rem;
+      }
+    }
   }
 }
