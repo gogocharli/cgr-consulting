@@ -2,7 +2,6 @@
   --flow-space: 2.5rem;
   background-color: var(--color-primary);
   margin-top: 5rem;
-  margin-bottom: 2rem;
 
   > div {
     padding-block: var(--flow-space);
@@ -56,8 +55,13 @@
   }
 
   @include media-query('md') {
-    border-radius: 0.5rem;
     background-color: var(--color-white);
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+
+    > div {
+      border-radius: 0.5rem;
+    }
 
     &__image {
       width: 25rem;
