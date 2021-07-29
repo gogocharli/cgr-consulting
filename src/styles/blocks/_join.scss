@@ -1,6 +1,10 @@
 .join {
   --flow-space: 2.5rem;
 
+  &.wrapper {
+    position: static;
+  }
+
   > div {
     --flow-space: 1rem;
   }

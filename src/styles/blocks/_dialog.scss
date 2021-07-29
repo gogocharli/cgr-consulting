@@ -1,0 +1,65 @@
+.dialog {
+  inset: 0;
+  margin: 0 !important;
+  padding: 1rem;
+  position: absolute;
+  z-index: 100;
+
+  &__overlay {
+    background-color: var(--color-primary-tint);
+    opacity: 0.5;
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  &__content {
+    background-color: var(--color-white);
+    border-radius: 0.5rem;
+    position: relative;
+    z-index: 10;
+
+    > * {
+      align-self: center;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+  }
+
+  .signup-intro {
+    display: none;
+  }
+
+  @include media-query('md') {
+    padding: 2.5rem;
+  }
+
+  @include media-query('lg') {
+    &__content {
+      padding: 7rem 0;
+    }
+
+    &__title {
+      margin-bottom: 3rem;
+    }
+
+    .signup-intro {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      grid-column: 2 / span 4;
+    }
+
+    .form {
+      grid-column: 7 / span 5;
+    }
+  }
+}
+
+body {
+  overflow: hidden !important;
+}

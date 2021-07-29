@@ -69,7 +69,7 @@ module.exports = {
       fr: 'Attachez CV',
     },
     submit: {
-      en: 'Get in touch',
+      en: 'Send',
       fr: 'Envoyer',
     },
   },

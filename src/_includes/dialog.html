@@ -1,0 +1,33 @@
+<div
+  role="dialog"
+  id="signup-dialog"
+  class="dialog hidden"
+  aria-modal="true"
+  aria-labelledby="dialog-label"
+>
+  <div class="dialog__overlay"></div>
+  <div class="dialog__content standard-grid">
+    <div class="signup-intro">
+      <h2
+        id="dialog-label"
+        class="[ dialog__title ] [ text-500 leading-fit align-center ]"
+      >
+        Tell us a bit about who you are. We'll review your fit for the company
+        and contact you for an interview.
+      </h2>
+      <img
+        loading="lazy"
+        class="signup-intro__image"
+        src="/static/illustrations/signup.svg"
+        alt=""
+        height="376"
+        width="317"
+      />
+    </div>
+    {% include 'form.html' %}
+    <button type="button" id="dialog-close" class="dialog__close">
+      <span class="visually-hidden">Close</span>
+      {% include 'icons/icon-close.svg' %}
+    </button>
+  </div>
+</div>

@@ -1139,7 +1139,6 @@ article {
   background-color: #1b4ecc;
   background-color: var(--color-primary);
   margin-top: 5rem;
-  margin-bottom: 2rem;
 }
 .site-foot > div {
   padding-top: var(--flow-space);
@@ -1188,6 +1187,8 @@ article {
   .site-foot {
     background-color: #fbf9f9;
     background-color: var(--color-white);
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
   }
   .site-foot > div {
     border-radius: 0.5rem;
@@ -1542,8 +1543,15 @@ article {
 .join {
   --flow-space: 2.5rem;
 }
+.join.wrapper {
+  position: static;
+}
 .join > div {
   --flow-space: 1rem;
+}
+.join__description {
+  margin-left: auto;
+  margin-right: auto;
 }
 .join .work__header {
   border-top: 1px solid #1b4ecc;
@@ -1558,6 +1566,8 @@ article {
 }
 .join .perk__heading img {
   height: 11.875rem;
+  margin-left: auto;
+  margin-right: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1641,6 +1651,72 @@ article {
   .join .perk p {
     margin-top: 1.25rem;
   }
+}
+
+.dialog {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 !important;
+  padding: 1rem;
+  position: absolute;
+  z-index: 100;
+}
+.dialog__overlay {
+  background-color: #9aa8ff;
+  background-color: var(--color-primary-tint);
+  opacity: 0.5;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+}
+.dialog__content {
+  background-color: #fbf9f9;
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  position: relative;
+  z-index: 10;
+}
+.dialog__content > * {
+  align-self: center;
+}
+.dialog__close {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+.dialog .signup-intro {
+  display: none;
+}
+@media (min-width: 50em) {
+  .dialog {
+    padding: 2.5rem;
+  }
+}
+@media (min-width: 65em) {
+  .dialog__content {
+    padding: 7rem 0;
+  }
+  .dialog__title {
+    margin-bottom: 3rem;
+  }
+  .dialog .signup-intro {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/span 4;
+  }
+  .dialog .form {
+    grid-column: 7/span 5;
+  }
+}
+
+body {
+  overflow: hidden !important;
 }
 
 /**
