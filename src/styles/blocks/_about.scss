@@ -2,7 +2,7 @@
   --flow-space: 2rem;
   padding-block: 2.5rem;
 
-  > div {
+  &__wrapper {
     position: relative;
   }
 
@@ -28,6 +28,79 @@
 
     svg {
       flex: 0 0 calc(33vw - 2rem);
+    }
+  }
+
+  @include media-query('md') {
+    &__wrapper {
+      > * {
+        grid-column: 1 / -1;
+      }
+    }
+
+    &__header {
+      text-transform: uppercase;
+    }
+
+    &__prefix {
+      text-transform: none;
+    }
+
+    .since {
+      position: relative;
+      top: unset;
+      left: unset;
+      transform: unset;
+
+      > svg {
+        transform: scale(0.7);
+      }
+    }
+
+    &__text {
+      display: flex;
+      align-items: center;
+    }
+
+    &__description {
+      flex-basis: 66%;
+      margin-left: 1.25rem;
+      columns: 2;
+    }
+
+    .logo-garden {
+      > * + * {
+        margin-left: 1.25rem;
+      }
+
+      svg {
+        flex: 1 1 auto;
+      }
+    }
+  }
+
+  @include media-query('lg') {
+    &__header {
+      grid-column: 2 / span 10;
+      letter-spacing: -0.01em;
+    }
+
+    &__text {
+      grid-column: 2 / span 9;
+    }
+
+    .since {
+      flex-grow: 1;
+      display: flex;
+      place-content: center;
+
+      svg {
+        transform: scale(1);
+      }
+    }
+
+    .logo-garden {
+      grid-column: 3 / span 8;
     }
   }
 }

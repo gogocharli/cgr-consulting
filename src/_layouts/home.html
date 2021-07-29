@@ -34,20 +34,20 @@ endmacro %} {% extends './base.html' %} {% block content %}
 </section>
 
 <article id="about" class="[ about ] [ bg-primary font-smooth ] [ text-inverted align-center md:align-left ]">
-  <div class="wrapper flow">
+  <div class="[ about__wrapper ] [ wrapper flow standard-grid ]">
     <h2
       class="[ about__header ] [ font-sans text-700 md:text-800 ] [ leading-flat ]"
     >
       <span
-        class="[ header__prefix ] [ text-400 md:text-500 ] [ leading-tight font-italic ]"
+        class="[ about__prefix ] [ text-400 md:text-500 ] [ leading-tight font-italic ]"
         >({{about.prefix}})</span
       >
-      {{about.title}}
+      <span>{{about.title}}</span>
     </h2>
-    <div class="since">
-      {% include 'illustrations/since-star.svg' %}
-    </div>
-    <div>
+    <div class="about__text">
+      <div class="since">
+        {% include 'illustrations/since-star.svg' %}
+      </div>
       <p class="[ about__description ] [ text-300 md:text-400 ]">{{about.text}}</p>
     </div>
     <div class="logo-garden">
