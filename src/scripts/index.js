@@ -1,18 +1,6 @@
-// import { mountFileInput, validateForm, linkForms } from './forms/index.js';
+import { mountFileInput } from './forms/index.js';
 
-// var lang = document.documentElement.lang;
-// var mainForm = document.querySelector('.form form');
-// var containsHelper = mainForm.getAttribute('data-size') !== 'full';
-
-// var mq = window.matchMedia('(min-width: 40em)');
-// mq.addListener(handleSizeChange);
-
-// if (!containsHelper) {
-//   mountFileInput();
-// } else {
-//   linkForms(mainForm);
-//   validateForm(mainForm, lang);
-// }
+const mainForm = document.querySelector('form');
 
 /** Menu Open and Close */
 const bodyEl = document.querySelector('body');
@@ -55,6 +43,7 @@ modalToggle.addEventListener('click', () => {
   const closeButton = modalEl.querySelector('#dialog-close');
 
   closeButton.addEventListener('click', handleModalClose);
+  mountFileInput();
 });
 
 function handleModalClose(e) {

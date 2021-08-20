@@ -1,15 +1,15 @@
-{% macro path(pathName, value='', type='text') %} "{{pathName}}/{{value}}" {%
-endmacro %} {% extends './base.html' %} {% block content %}
-<section class="hero">
-  <div class="hero__content flow">
-    <div class="wrapper triple-grid">
-      <h1
+{% extends './base.html' %}
+{% block content %}
+  <section class="hero">
+    <div class="hero__content flow">
+      <div class="wrapper triple-grid">
+        <h1
         class="[ hero__heading ] [ text-500 md:text-600 lg:text-700 ] [ leading-tight md:leading-flat measure-short ]"
       >
-        {{ hero.title }}
-      </h1>
-    </div>
-    <img
+          {{ hero.title }}
+        </h1>
+      </div>
+      <img
       loading="lazy"
       class="hero__image"
       src="/static/img-hero.jpg"
@@ -17,95 +17,95 @@ endmacro %} {% extends './base.html' %} {% block content %}
       srcset="/static/img-hero.jpg 1x, /static/img-hero-hd.jpg 2x"
       height="576"
       width="1440"
-    />
-    <div class="hero__text wrapper flow triple-grid">
-      <h2
+/>
+      <div class="hero__text wrapper flow triple-grid">
+        <h2
         class="
           [ hero__subtitle ] [ text-400 text-uppercase ] [ font-sans leading-tight tracking-loose ]
         "
       >
-        {{ hero.subtitle }}
-      </h2>
-      {% for text in hero.description %}
-      <p class="[ hero__description ] [ text-400 leading-loose measure-long ]">{{ text }}</p>
-      {% endfor %}
+          {{ hero.subtitle }}
+        </h2>
+        {% for text in hero.description %}
+          <p class="[ hero__description ] [ text-400 leading-loose measure-long ]">{{ text }}</p>
+        {% endfor %}
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<article id="about" class="[ about ] [ bg-primary font-smooth ] [ text-inverted align-center md:align-left ]">
-  <div class="[ about__wrapper ] [ wrapper flow standard-grid ]">
-    <h2
+  <article id="about" class="[ about ] [ bg-primary font-smooth ] [ text-inverted align-center md:align-left ]">
+    <div class="[ about__wrapper ] [ wrapper flow standard-grid ]">
+      <h2
       class="[ about__header ] [ font-sans text-700 md:text-800 ] [ leading-flat ]"
     >
-      <span
+        <span
         class="[ about__prefix ] [ text-400 md:text-500 ] [ leading-tight font-italic ]"
         >({{about.prefix}})</span
       >
-      <span>{{about.title}}</span>
-    </h2>
-    <div class="about__text">
-      <div class="since">
-        {% include 'illustrations/since-star.svg' %}
+        <span>{{about.title}}</span>
+      </h2>
+      <div class="about__text">
+        <div class="since">
+          {% include 'illustrations/since-star.svg' %}
+        </div>
+        <p class="[ about__description ] [ text-300 md:text-400 ]">{{about.text}}</p>
       </div>
-      <p class="[ about__description ] [ text-300 md:text-400 ]">{{about.text}}</p>
-    </div>
-    <div class="logo-garden">
-      {% for company in about.logos %}
+      <div class="logo-garden">
+        {% for company in about.logos %}
           {%- include "logos/logo-" + company + ".svg" -%}
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
-  </div>
-</article>
+  </article>
 
-<article id="mission" class="mission wrapper flow">
-  <div class="mission__text">
-    <h2 class="
+  <article id="mission" class="mission wrapper flow">
+    <div class="mission__text">
+      <h2 class="
       [ mission__header ] [ text-550 md:text-700 lg:text-800 ]
       [ leading-tight md:leading-flat ][ tracking-fit lg:tracking-flat ]">
-      {{ mission.title }}
-    </h2>
-    <p class="[ text-300 md:text-400 measure-short ]">{{ mission.description }}</p>
-  </div>
-  <ul class="objectives triple-grid">
-    {% for goal in mission.objectives %}
-    <li class="[ goal ] [ align-center flow ]">
-      <img src="/static/{{ goal.image }}" alt="" />
-      <h3 class="[ font-sans text-uppercase ] [ text-300 md:text-400 leading-tight tracking-loose ]">
-        {{ goal.title }}
-      </h3>
-      <p class="[ text-300 md:text-400 ]">{{ goal.description }}</p>
-    </li>
-    {% endfor %}
-  </ul>
-</article>
-
-<article id="join" class="[ join ] [ wrapper flow align-center ]">
-  <div class="flow">
-    <h2 class="
-      [ join__header ] [ text-550 md:text-700 lg:text-800 ]
-      [ leading-tight md:leading-flat md:measure-micro ] [ tracking-fit tracking-flat ]">
-      {{ careers.title }}
-    </h2>
-    <p class="[ join__description ] [ text-300 md:text-400 measure-long ]">{{ careers.description }}</p>
-  </div>
-  <section class="work flow">
-    <h3 class="[ work__header ] [ font-sans text-uppercase text-400 ] [ leading-tight tracking-loose ]">
-      {{ careers.work }}
-    </h3>
-    <ul class="perks flow standard-grid">
-      {% for perk in careers.perks %}
-      <li class="perk">
-        <div class="perk__heading">
-          <img src="/static/{{ perk.image }}" alt="" />
-          <h4 class="[ font-sans text-uppercase text-300 ] [ leading-fit tracking-loose ]">{{ perk.title }}</h4>
-        </div>
-        <p class="[ text-300 md:text-400 ] [ align-left lg:align-center ]">{{ perk.description }}</p>
-      </li>
+        {{ mission.title }}
+      </h2>
+      <p class="[ text-300 md:text-400 measure-short ]">{{ mission.description }}</p>
+    </div>
+    <ul class="objectives triple-grid">
+      {% for goal in mission.objectives %}
+        <li class="[ goal ] [ align-center flow ]">
+          <img src="/static/{{ goal.image }}" alt=""/>
+          <h3 class="[ font-sans text-uppercase ] [ text-300 md:text-400 leading-tight tracking-loose ]">
+            {{ goal.title }}
+          </h3>
+          <p class="[ text-300 md:text-400 ]">{{ goal.description }}</p>
+        </li>
       {% endfor %}
     </ul>
-  </section>
-  <button id="modal-toggle" type="button" class="modal__toggle button" aria-expanded="false">{{ 'cta' | i18n }}</button>
-  {% include 'dialog.html' %}
-</article>
+  </article>
+
+  <article id="join" class="[ join ] [ wrapper flow align-center ]">
+    <div class="flow">
+      <h2 class="
+      [ join__header ] [ text-550 md:text-700 lg:text-800 ]
+      [ leading-tight md:leading-flat md:measure-micro ] [ tracking-fit tracking-flat ]">
+        {{ careers.title }}
+      </h2>
+      <p class="[ join__description ] [ text-300 md:text-400 measure-long ]">{{ careers.description }}</p>
+    </div>
+    <section class="work flow">
+      <h3 class="[ work__header ] [ font-sans text-uppercase text-400 ] [ leading-tight tracking-loose ]">
+        {{ careers.work }}
+      </h3>
+      <ul class="perks flow standard-grid">
+        {% for perk in careers.perks %}
+          <li class="perk">
+            <div class="perk__heading">
+              <img src="/static/{{ perk.image }}" alt=""/>
+              <h4 class="[ font-sans text-uppercase text-300 ] [ leading-fit tracking-loose ]">{{ perk.title }}</h4>
+            </div>
+            <p class="[ text-300 md:text-400 ] [ align-left lg:align-center ]">{{ perk.description }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+    <button id="modal-toggle" type="button" class="modal__toggle button" aria-expanded="false">{{ 'cta' | i18n }}</button>
+    {% include 'dialog.html' %}
+  </article>
 {% endblock %}

@@ -1732,14 +1732,18 @@ body.is-modal-open .menu a[data-highlight=true] {
   border: 0;
   border-radius: 2px;
 }
-.form label.button {
-  border-radius: 2px;
-  display: block;
-  line-height: inherit;
+.form .file,
+.form .file * {
   margin-top: 0;
 }
-.form .file {
-  margin-top: 0;
+.form .file label {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  line-height: inherit;
+}
+.form .file label > span {
+  border: 1px solid #fbf9f9;
 }
 .form .file[focus-within] {
   outline: 2px dashed #fbf9f9;
