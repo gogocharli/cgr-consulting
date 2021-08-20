@@ -5,6 +5,7 @@
       <div class="wrapper triple-grid">
         <h1
         class="[ hero__heading ] [ text-500 md:text-600 lg:text-700 ] [ leading-tight md:leading-flat measure-short ]"
+        data-splitting="words"
       >
           {{ hero.title }}
         </h1>
@@ -23,11 +24,12 @@
         class="
           [ hero__subtitle ] [ text-400 text-uppercase ] [ font-sans leading-tight tracking-loose ]
         "
+        data-animate="fade-up"
       >
           {{ hero.subtitle }}
         </h2>
         {% for text in hero.description %}
-          <p class="[ hero__description ] [ text-400 leading-loose measure-long ]">{{ text }}</p>
+          <p class="[ hero__description ] [ text-400 leading-loose measure-long ]" data-animate="fade-up">{{ text }}</p>
         {% endfor %}
       </div>
     </div>
@@ -37,6 +39,7 @@
     <div class="[ about__wrapper ] [ wrapper flow standard-grid ]">
       <h2
       class="[ about__header ] [ font-sans text-700 md:text-800 ] [ leading-flat ]"
+      data-animate="in-view"
     >
         <span
         class="[ about__prefix ] [ text-400 md:text-500 ] [ leading-tight font-italic ]"
@@ -44,13 +47,13 @@
       >
         <span>{{about.title}}</span>
       </h2>
-      <div class="about__text">
+      <div class="about__text" data-animate="in-view">
         <div class="since">
           {% include 'illustrations/since-star.svg' %}
         </div>
         <p class="[ about__description ] [ text-300 md:text-400 ]">{{about.text}}</p>
       </div>
-      <div class="logo-garden">
+      <div class="logo-garden" data-animate="in-view">
         {% for company in about.logos %}
           {%- include "logos/logo-" + company + ".svg" -%}
         {% endfor %}
@@ -59,7 +62,7 @@
   </article>
 
   <article id="mission" class="mission wrapper flow">
-    <div class="mission__text">
+    <div class="mission__text" data-animate="in-view">
       <h2 class="
       [ mission__header ] [ text-550 md:text-700 lg:text-800 ]
       [ leading-tight md:leading-flat ][ tracking-fit lg:tracking-flat ]">
@@ -69,7 +72,7 @@
     </div>
     <ul class="objectives triple-grid">
       {% for goal in mission.objectives %}
-        <li class="[ goal ] [ align-center flow ]">
+        <li class="[ goal ] [ align-center flow ]" data-animate="in-view">
           <img src="/static/{{ goal.image }}" alt=""/>
           <h3 class="[ font-sans text-uppercase ] [ text-300 md:text-400 leading-tight tracking-loose ]">
             {{ goal.title }}
@@ -81,7 +84,7 @@
   </article>
 
   <article id="join" class="[ join ] [ wrapper flow align-center ]">
-    <div class="flow">
+    <div class="flow" data-animate="in-view">
       <h2 class="
       [ join__header ] [ text-550 md:text-700 lg:text-800 ]
       [ leading-tight md:leading-flat md:measure-micro ] [ tracking-fit tracking-flat ]">
@@ -89,13 +92,13 @@
       </h2>
       <p class="[ join__description ] [ text-300 md:text-400 measure-long ]">{{ careers.description }}</p>
     </div>
-    <section class="work flow">
+    <section class="work flow" data-animate="in-view">
       <h3 class="[ work__header ] [ font-sans text-uppercase text-400 ] [ leading-tight tracking-loose ]">
         {{ careers.work }}
       </h3>
       <ul class="perks flow standard-grid">
         {% for perk in careers.perks %}
-          <li class="perk">
+          <li class="perk" data-animate="in-view">
             <div class="perk__heading">
               <img src="/static/{{ perk.image }}" alt=""/>
               <h4 class="[ font-sans text-uppercase text-300 ] [ leading-fit tracking-loose ]">{{ perk.title }}</h4>
