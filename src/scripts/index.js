@@ -78,13 +78,13 @@ const inViewEls = document.querySelectorAll('[data-animate="in-view"]');
 const inViewObserver = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting && entry.intersectionRatio > 0.25) {
+      if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
         // Make appear in view
         anime({
           targets: entry.target.children,
           opacity: 1,
           translateY: 0,
-          duration: 300,
+          duration: 350,
           easing: EASE_IN_OUT_SINE,
           delay: anime.stagger(50),
         });
