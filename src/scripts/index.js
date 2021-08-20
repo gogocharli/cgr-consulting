@@ -84,10 +84,12 @@ const inViewObserver = new IntersectionObserver(
           targets: entry.target.children,
           opacity: 1,
           translateY: 0,
-          duration: 250,
+          duration: 300,
           easing: EASE_IN_OUT_SINE,
           delay: anime.stagger(50),
         });
+
+        observer.unobserve(entry.target);
       }
     });
   },
