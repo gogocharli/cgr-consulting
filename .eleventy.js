@@ -37,7 +37,7 @@ module.exports = function (config) {
   config.addPlugin(i18n, {
     translations,
     fallbackLocales: {
-      fr: 'en',
+      '*': 'en',
     },
   });
 
