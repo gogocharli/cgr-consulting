@@ -26,7 +26,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"mountFileInput\": () => (/* reexport safe */ _file_input__WEBPACK_IMPORTED_MODULE_0__.mountFileInput)\n/* harmony export */ });\n/* harmony import */ var _file_input__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./file-input */ \"./src/scripts/forms/file-input.js\");\n\n\n//# sourceURL=webpack:///./src/scripts/forms/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"initFormModal\": () => (/* reexport safe */ _modal__WEBPACK_IMPORTED_MODULE_0__.initFormModal)\n/* harmony export */ });\n/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modal */ \"./src/scripts/forms/modal.js\");\n\n\n//# sourceURL=webpack:///./src/scripts/forms/index.js?");
+
+/***/ }),
+
+/***/ "./src/scripts/forms/modal.js":
+/*!************************************!*\
+  !*** ./src/scripts/forms/modal.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"initFormModal\": () => (/* binding */ initFormModal)\n/* harmony export */ });\n/* harmony import */ var _file_input__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./file-input */ \"./src/scripts/forms/file-input.js\");\n\nfunction initFormModal() {\n  var bodyEl = document.querySelector('body');\n  var modalEl = document.querySelector('[role=\"dialog\"]');\n  var modalToggle = document.querySelector('#modal-toggle');\n  modalToggle.addEventListener('click', function () {\n    modalToggle.setAttribute('aria-expanded', true);\n    bodyEl.classList.add('is-modal-open');\n    modalEl.classList.add('is-visible');\n    modalEl.querySelector('form input').focus();\n    var closeButton = modalEl.querySelector('#dialog-close');\n    closeButton.addEventListener('click', handleModalClose);\n    (0,_file_input__WEBPACK_IMPORTED_MODULE_0__.mountFileInput)();\n  });\n\n  function handleModalClose(e) {\n    modalToggle.setAttribute('aria-expanded', false);\n    modalEl.classList.remove('is-visible');\n    bodyEl.classList.remove('is-modal-open');\n    e.target.removeEventListener('click', handleModalClose);\n  }\n}\n\n//# sourceURL=webpack:///./src/scripts/forms/modal.js?");
 
 /***/ }),
 
@@ -36,7 +46,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _forms_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./forms/index.js */ \"./src/scripts/forms/index.js\");\n\nvar mainForm = document.querySelector('form');\n/** Menu Open and Close */\n\nvar bodyEl = document.querySelector('body');\nvar menuToggle = document.querySelector('#menu-toggle');\nvar menu = document.querySelector('#menu');\nmenuToggle.addEventListener('click', function (e) {\n  bodyEl.classList.toggle('is-modal-open');\n  var isMenuVisible = menuToggle.getAttribute('aria-expanded') == 'true';\n  var newMenuState = !isMenuVisible;\n  menuToggle.setAttribute('aria-expanded', !isMenuVisible);\n  menu.setAttribute('aria-hidden', isMenuVisible);\n  menuToggle.setAttribute('data-inverted', !isMenuVisible);\n  menuToggle.textContent = isMenuVisible ? 'Menu' : 'Close';\n});\nvar menuItems = menu.querySelector('ul');\nmenuItems.addEventListener('click', function (e) {\n  bodyEl.classList.remove('is-modal-open');\n  menuToggle.setAttribute('aria-expanded', false);\n  menu.setAttribute('aria-hidden', true);\n  menuToggle.setAttribute('data-inverted', false);\n  menuToggle.textContent = 'Menu';\n});\n/* Modal Logic */\n\nvar modalEl = document.querySelector('[role=\"dialog\"]');\nvar modalToggle = document.querySelector('#modal-toggle');\nmodalToggle.addEventListener('click', function () {\n  modalToggle.setAttribute('aria-expanded', true);\n  bodyEl.classList.add('is-modal-open');\n  modalEl.classList.add('is-visible');\n  modalEl.querySelector('form input').focus();\n  var closeButton = modalEl.querySelector('#dialog-close');\n  closeButton.addEventListener('click', handleModalClose);\n  (0,_forms_index_js__WEBPACK_IMPORTED_MODULE_0__.mountFileInput)();\n});\n\nfunction handleModalClose(e) {\n  modalToggle.setAttribute('aria-expanded', false);\n  modalEl.classList.remove('is-visible');\n  bodyEl.classList.remove('is-modal-open');\n  e.target.removeEventListener('click', handleModalClose);\n}\n\n//# sourceURL=webpack:///./src/scripts/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu */ \"./src/scripts/menu.js\");\n/* harmony import */ var _forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./forms */ \"./src/scripts/forms/index.js\");\n\n\n(0,_menu__WEBPACK_IMPORTED_MODULE_0__.initMainMenu)();\n(0,_forms__WEBPACK_IMPORTED_MODULE_1__.initFormModal)();\n\n//# sourceURL=webpack:///./src/scripts/index.js?");
+
+/***/ }),
+
+/***/ "./src/scripts/menu.js":
+/*!*****************************!*\
+  !*** ./src/scripts/menu.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"initMainMenu\": () => (/* binding */ initMainMenu)\n/* harmony export */ });\nfunction initMainMenu() {\n  var bodyEl = document.querySelector('body');\n  var menuToggle = document.querySelector('#menu-toggle');\n  var menu = document.querySelector('#menu');\n  menuToggle.addEventListener('click', function (e) {\n    bodyEl.classList.toggle('is-modal-open');\n    var isMenuVisible = menuToggle.getAttribute('aria-expanded') == 'true';\n    var newMenuState = !isMenuVisible;\n    menuToggle.setAttribute('aria-expanded', !isMenuVisible);\n    menu.setAttribute('aria-hidden', isMenuVisible);\n    menuToggle.setAttribute('data-inverted', !isMenuVisible);\n    menuToggle.textContent = isMenuVisible ? 'Menu' : 'Close';\n  });\n  var menuItems = menu.querySelector('ul');\n  menuItems.addEventListener('click', function (e) {\n    bodyEl.classList.remove('is-modal-open');\n    menuToggle.setAttribute('aria-expanded', false);\n    menu.setAttribute('aria-hidden', true);\n    menuToggle.setAttribute('data-inverted', false);\n    menuToggle.textContent = 'Menu';\n  });\n}\n\n//# sourceURL=webpack:///./src/scripts/menu.js?");
 
 /***/ }),
 
