@@ -4,6 +4,7 @@ specifiers:
   '@11ty/eleventy': ^0.11.0
   '@babel/core': ^7.14.8
   '@babel/preset-env': ^7.14.8
+  animejs: ^3.2.1
   autoprefixer: ^10.3.1
   babel-loader: ^8.2.2
   css-loader: ^6.2.0
@@ -22,9 +23,14 @@ specifiers:
   prettier: ^2.2.1
   sass: ^1.36.0
   sass-loader: ^12.1.0
+  splitting: ^1.0.6
   webpack: ^5.47.0
   webpack-cli: ^4.7.2
   webpack-manifest-plugin: ^3.2.0
+
+dependencies:
+  animejs: 3.2.1
+  splitting: 1.0.6
 
 devDependencies:
   '@11ty/eleventy': 0.11.1
@@ -1501,6 +1507,10 @@ packages:
   /alphanum-sort/1.0.2:
     resolution: {integrity: sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=}
     dev: true
+
+  /animejs/3.2.1:
+    resolution: {integrity: sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A==}
+    dev: false
 
   /ansi-regex/2.1.1:
     resolution: {integrity: sha1-w7M6te42DYbg5ijwRorn7yfWVN8=}
@@ -5632,6 +5642,10 @@ packages:
   /spdx-license-ids/3.0.9:
     resolution: {integrity: sha512-Ki212dKK4ogX+xDo4CtOZBVIwhsKBEfsEEcwmJfLQzirgc2jIWdzg40Unxz/HzEUqM1WFzVlQSMF9kZZ2HboLQ==}
     dev: true
+
+  /splitting/1.0.6:
+    resolution: {integrity: sha512-2hYicS/hTy1MgjTi4ST6B298uoLSx854VfTf0FeMmCeE6OiZjEixTOGPLqnNzSaM/y3jwoEYj5pmDzYFwRInPw==}
+    dev: false
 
   /sprintf-js/1.0.3:
     resolution: {integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=}

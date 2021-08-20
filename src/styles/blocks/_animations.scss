@@ -1,10 +1,1 @@
-@keyframes breathe {
-  from {
-    transfom: translateZ(0) scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(5%) scale(0.92);
-    opacity: 0.75;
-  }
-}
+// Styles applied to animated elements by default
