@@ -17,12 +17,10 @@
     {% bundledCSS %} {% bundledJS %}
   </head>
   <body class="bg-white">
-    <div class="site-wrap">
-      {% include "header.html" %}
-      <main id="main-content" tabindex="-1">
-        {%- block content %}{% endblock -%}
-      </main>
-      {% include "footer.html" %}
-    </div>
+    {% include "header.html" %}
+    <main id="main-content" tabindex="-1">
+      {%- block content %}{% endblock -%}
+    </main>
+    {% include "footer.html" %}
   </body>
 </html>
