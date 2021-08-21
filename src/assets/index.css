@@ -1410,9 +1410,11 @@ body.is-modal-open .menu a[data-highlight=true] {
 }
 .about .since {
   position: absolute;
-  transform: scale(0.3);
   top: 1rem;
   left: -3rem;
+}
+.about .since > svg {
+  transform: scale(0.3);
 }
 .about .logo-garden {
   display: flex;

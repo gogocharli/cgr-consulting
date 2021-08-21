@@ -13,9 +13,12 @@
 
   .since {
     position: absolute;
-    transform: scale(0.3);
     top: 1rem;
     left: -3rem;
+
+    > svg {
+      transform: scale(0.3);
+    }
   }
 
   .logo-garden {

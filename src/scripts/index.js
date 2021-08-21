@@ -3,6 +3,10 @@ import { initFormModal } from './forms';
 import anime from 'animejs';
 import Splitting from 'splitting';
 
+// Initialize Components
+initMainMenu();
+initFormModal();
+
 Splitting();
 
 const navItems = document.querySelectorAll(
@@ -68,11 +72,6 @@ tl.add({
     },
     '-=200',
   );
-
-tl.finished.then(() => {
-  initMainMenu();
-  initFormModal();
-});
 
 const inViewEls = document.querySelectorAll('[data-animate="in-view"]');
 const inViewObserver = new IntersectionObserver(
