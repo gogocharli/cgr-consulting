@@ -1001,7 +1001,6 @@ button {
 }
 body {
   color: #1b4ecc;
-  display: grid;
   font-size: 1.375rem;
   line-height: 1.4;
   scroll-behavior: smooth;
@@ -1370,6 +1369,10 @@ body.is-modal-open .menu a[data-highlight=true] {
   -o-object-fit: cover;
      object-fit: cover;
   width: min(100vw, 85rem);
+}
+.hero__image img {
+  /* The <picture> element doesn't seem to respect the margin (?) */
+  margin: inherit;
 }
 .hero__text > * {
   --flow-space: 1.25rem;

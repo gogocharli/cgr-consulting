@@ -8,6 +8,11 @@
     max-width: 90rem;
     object-fit: cover;
     width: min(100vw, 85rem);
+
+    img {
+      /* The <picture> element doesn't seem to respect the margin (?) */
+      margin: inherit;
+    }
   }
 
   &__text {

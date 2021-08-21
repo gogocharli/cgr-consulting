@@ -10,15 +10,14 @@
           {{ hero.title }}
         </h1>
       </div>
-      <img
+      <picture
       loading="lazy"
       class="hero__image"
-      src="/static/img-hero.jpg"
-      alt=""
-      srcset="/static/img-hero.jpg 1x, /static/img-hero-hd.jpg 2x"
-      height="576"
-      width="1440"
-/>
+      >
+        <source srcset="/static/img-hero.webp 1x, /static/img-hero-hd.webp 2x" type="image/webp">
+        <source srcset="/static/img-hero.jpg 1x, /static/img-hero-hd.jpg 2x" type="image/jpeg">
+        <img src="/static/img-hero.jpg" height="576" width="1440"/>
+      </picture>
       <div class="hero__text wrapper flow triple-grid">
         <h2
         class="
@@ -73,7 +72,7 @@
     <ul class="objectives triple-grid">
       {% for goal in mission.objectives %}
         <li class="[ goal ] [ align-center flow ]" data-animate="in-view">
-          <img src="/static/{{ goal.image }}" alt=""/>
+          <img src="/static/{{ goal.image }}" alt="" height="112" />
           <h3 class="[ font-sans text-uppercase ] [ text-300 md:text-400 leading-tight tracking-loose ]">
             {{ goal.title }}
           </h3>
@@ -100,7 +99,7 @@
         {% for perk in careers.perks %}
           <li class="perk" data-animate="in-view">
             <div class="perk__heading">
-              <img src="/static/{{ perk.image }}" alt=""/>
+              <img src="/static/{{ perk.image }}" alt=""/ height="190">
               <h4 class="[ font-sans text-uppercase text-300 ] [ leading-fit tracking-loose ]">{{ perk.title }}</h4>
             </div>
             <p class="[ text-300 md:text-400 ] [ align-left lg:align-center ]">{{ perk.description }}</p>
