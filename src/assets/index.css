@@ -1373,6 +1373,7 @@ body.is-modal-open .menu a[data-highlight=true] {
 .hero__image img {
   /* The <picture> element doesn't seem to respect the margin (?) */
   margin: inherit;
+  height: auto;
 }
 .hero__text > * {
   --flow-space: 1.25rem;
