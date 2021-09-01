@@ -80,6 +80,7 @@ module.exports = function (config) {
   config.addPassthroughCopy('src/static');
   config.addPassthroughCopy('src/assets');
   config.addPassthroughCopy('_redirects');
+  config.addPassthroughCopy('humans.txt');
 
   return {
     markdownTemplateEngine: 'njk',
