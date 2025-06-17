@@ -1,10 +1,10 @@
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/.pnpm/css-loader@6.2.0_webpack@5.47.0/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/.pnpm/postcss-loader@6.1.1_postcss@8.3.6+webpack@5.47.0/node_modules/postcss-loader/dist/cjs.js!./node_modules/.pnpm/sass-loader@12.1.0_sass@1.36.0+webpack@5.47.0/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/styles/base.scss ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/styles/base.scss ***!
+  \*****************************************************************************************************************************************************************************************************************/
 @import url(https://p.typekit.net/p.css?s=1&k=yel5fvs&ht=tk&f=44426.44428&a=13418997&app=typekit&e=css);
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/.pnpm/css-loader@6.2.0_webpack@5.47.0/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/.pnpm/postcss-loader@6.1.1_postcss@8.3.6+webpack@5.47.0/node_modules/postcss-loader/dist/cjs.js!./node_modules/.pnpm/sass-loader@12.1.0_sass@1.36.0+webpack@5.47.0/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/styles/base.scss (1) ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/styles/base.scss (1) ***!
+  \*********************************************************************************************************************************************************************************************************************/
 @charset "UTF-8";
 /*
  * The Typekit service used to deliver this font or fonts for use on websites
@@ -991,10 +991,8 @@ button {
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   * {
-    -webkit-animation-duration: 0.01s !important;
-            animation-duration: 0.01s !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+    animation-duration: 0.01s !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01s !important;
     scroll-behavior: auto !important;
   }
@@ -1717,9 +1715,6 @@ body.is-modal-open .menu a[data-highlight=true] {
   outline: none;
 }
 .form .field input::-moz-placeholder {
-  opacity: 0;
-}
-.form .field input:-ms-input-placeholder {
   opacity: 0;
 }
 .form .field input::placeholder {

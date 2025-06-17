@@ -12,7 +12,7 @@ about:
   title: A decade worth of expertise.
   prefix: Almost
   text: In 2012, Christopher Gregory Roussis founded CGR Consulting in the beautiful city of Ottawa after years of experience in sales and client outreach. Working on a campaign with one of biggest processing companies in Canada, the team quickly grew to dozens of experts, some of which opened their own offices across the country. After a few years Chris moved back to Quebec in order to access the bigger Montréal market,landing deals with comapnies such as Fiserv and Goodfood.
-  logos: ['c360hd', 'fiserv', 'clover', 'goodfood']
+  logos: ['c360hd', 'goodfood', 'clover']
 mission:
   title: We help deliver your products to a larger pool of customers.
   description: Don’t wait for the perfect opportunity to scale your customer acquisition needs. Leverage our team of sales experts to lead your efforts by meeting new consumers wherever they happen to be.
