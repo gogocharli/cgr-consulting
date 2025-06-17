@@ -1421,9 +1421,9 @@ body.is-modal-open .menu a[data-highlight=true] {
 .about .logo-garden {
   display: flex;
   overflow-x: auto;
-}
-.about .logo-garden > * + * {
-  margin-left: 0.625rem;
+  justify-content: center;
+  grid-gap: 0.625rem;
+  gap: 0.625rem;
 }
 .about .logo-garden svg {
   flex: 0 0 calc(33vw - 2rem);
@@ -1461,10 +1461,10 @@ body.is-modal-open .menu a[data-highlight=true] {
          columns: 2;
   }
   .about .logo-garden > * + * {
-    margin-left: 1.25rem;
+    margin-left: 4rem;
   }
   .about .logo-garden svg {
-    flex: 1 1 auto;
+    flex: 0 1 210px;
   }
 }
 @media (min-width: 65em) {

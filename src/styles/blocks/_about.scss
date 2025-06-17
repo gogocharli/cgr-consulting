@@ -24,10 +24,8 @@
   .logo-garden {
     display: flex;
     overflow-x: auto;
-
-    > * + * {
-      margin-left: 0.625rem;
-    }
+    justify-content: center;
+    gap: 0.625rem;
 
     svg {
       flex: 0 0 calc(33vw - 2rem);
@@ -75,11 +73,11 @@
 
     .logo-garden {
       > * + * {
-        margin-left: 1.25rem;
+        margin-left: 4rem;
       }
 
       svg {
-        flex: 1 1 auto;
+        flex: 0 1 210px;
       }
     }
   }
